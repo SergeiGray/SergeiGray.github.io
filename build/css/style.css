@@ -8,7 +8,8 @@ body {
   line-height: 24px;
   color: #444343;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  background-color: #ffffff; }
 
 .wrapper {
   display: -webkit-box;
