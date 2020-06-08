@@ -296,7 +296,6 @@
             $('#reasons'), {
             axis: 'y',
             duration: 1500,
-            offset: -64,
           });
         });
 
@@ -306,7 +305,6 @@
             $('#greeting'), {
             axis: 'y',
             duration: 1500,
-            offset: -64,
           });
         });
       };
