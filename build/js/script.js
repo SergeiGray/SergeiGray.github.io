@@ -32,7 +32,7 @@
             $(slider.slides[slider.currentSlide]).addClass('greeting__slider_active');
             $(slider.slides[slider.currentSlide + 1]).addClass('greeting__slider_next');
             $(slider.slides[slider.currentSlide - 1]).addClass('greeting__slider_prev');
-            // $(slider.slides).addClass('greeting__slider_shift');
+            $('.greeting__slider_container').attr('style', 'transform: translate3d(-624px, 0px, 0px);');
           },
           before: function(slider) {
             slider.last = slider.count - 1;
@@ -58,7 +58,7 @@
                 animation: "slide",
                 easing: "swing",
                 slideshow: false,
-                startAt: 1,
+                startAt: 10,
                 smoothHeight: true,
                 keyboard: true,
                 prevText: '',
@@ -66,7 +66,6 @@
                 itemWidth: 340,
                 itemMargin: 25,
                 minItems: 1,
-                maxItems: 6,
                 move: 1,
                 controlNav: false,
                 directionNav: true,
@@ -74,12 +73,11 @@
                 animationLoop: false,
                 animationSpeed: 900,
                 keyboard: false,
-                startAt: 2,
                 start: function(slider) {
                   $(slider.slides[slider.currentSlide]).addClass('result__slider_active');
                   $(slider.slides[slider.currentSlide + 1]).addClass('result__slider_next');
                   $(slider.slides[slider.currentSlide - 1]).addClass('result__slider_prev');
-                  // $(slider.slides).addClass('greeting__slider_shift');
+                  $('.result__slider_container').attr('style', 'transform: translate3d(-3650px, 0px, 0px);');
                 },
                 before: function(slider) {
                   slider.last = slider.count - 1;
@@ -128,13 +126,6 @@
             $(slider.slides[slider.currentSlide]).addClass('greeting__slider_active');
             $(slider.slides[slider.currentSlide + 1]).addClass('greeting__slider_next');
             $(slider.slides[slider.currentSlide - 1]).addClass('greeting__slider_prev');
-
-            // console.log(slider.controlNav);
-
-            // console.log(slider);
-            // console.log(slider.currentSlide);
-            // console.log(slider.count);
-            // console.log(slider.controlNavScaffold[0].childElementCount);
           },
           before: function(slider) {
             slider.last = slider.count - 1;
@@ -199,50 +190,6 @@
                 },
                 after: function(slider) {
                 }
-        });
-        $('.team__slider').flexslider({
-                selector: ".team__slider_container > li",
-                controlsContainer: ".team__flipping",
-                animation: "slide",
-                easing: "swing",
-                slideshow: false,
-                startAt: 1,
-                smoothHeight: true,
-                keyboard: true,
-                prevText: '',
-                nextText: '',
-                itemWidth: 280,
-                itemMargin: 0,
-                minItems: 1,
-                maxItems: 6,
-                move: 1,
-                controlNav: true,
-                directionNav: true,
-                touch: true,
-                animationLoop: true,
-                animationSpeed: 900,
-                // start: function(slider) {
-                //   $(slider.slides[slider.currentSlide]).addClass('team__slider_active');
-                //   $(slider.slides[slider.currentSlide + 1]).addClass('team__slider_next');
-                //   $(slider.slides[slider.currentSlide - 1]).addClass('team__slider_prev');
-                // },
-                // before: function(slider) {
-                //   // slider.last = slider.count - 1;
-                //   if (slider.direction === "next") {
-                //     $(slider.slides).removeClass('team__slider_active team__slider_next team__slider_prev');
-                //     $(slider.slides[slider.currentSlide + 1]).addClass('team__slider_active');
-                //     $(slider.slides[slider.currentSlide + 2]).addClass('team__slider_next');
-                //     $(slider.slides[slider.currentSlide]).addClass('team__slider_prev');
-                //   }
-                //   if (slider.direction === "prev") {
-                //     $(slider.slides).removeClass('team__slider_active team__slider_next team__slider_prev');
-                //     $(slider.slides[slider.currentSlide - 1]).addClass('team__slider_active');
-                //     $(slider.slides[slider.currentSlide]).addClass('team__slider_next');
-                //     $(slider.slides[slider.currentSlide - 2]).addClass('team__slider_prev');
-                //   }
-                // },
-                // after: function(slider) {
-                // }
         });
       }
     });
@@ -311,6 +258,23 @@
     });
   };
 
+  var scrollBarСustomization = function () {
+    $('body').niceScroll({
+      cursorborder: "none",
+      horizrailenabled: false
+    });
+    $('.course__popup').niceScroll({
+      cursorborder: "none",
+      horizrailenabled: false
+    });
+    if($(window).width() > 750) {
+      $('.team__diploma-popup').niceScroll({
+        cursorborder: "none",
+        horizrailenabled: false
+      });
+    }
+  };
+
   var getBlockQuestionsSlider = function () {
     $('#questions-button').click( function (evt) {
         evt.preventDefault();
@@ -318,6 +282,15 @@
           $(evt.target).parents('.item').toggleClass('active');
         });
     });
+
+    if($(window).width() < 751) {
+      $('.course__popup-number').click( function (evt) {
+          evt.preventDefault();
+          $(evt.target).parents('.course__popup-module').find('.course__popup-hidden').slideToggle('fast', function() {
+            $(evt.target).parents('.course__popup-module').toggleClass('active');
+          });
+      });
+    }
   };
 
   var showPopUpVideo = function () {
@@ -352,17 +325,129 @@
     $('.team__diploma-link').click(function (event) {
       event.preventDefault();
       $('.team__diploma-popup, .overlay').css({'opacity': 1, 'display': 'flex'});
-      $('body').attr('style', 'overflow: hidden;');
+      if($(window).width() < 751) {
+        $('.team__slider').flexslider({
+          selector: ".team__slider_container > li",
+          controlsContainer: ".team__flipping",
+          animation: "slide",
+          easing: "swing",
+          slideshow: false,
+          startAt: 1,
+          smoothHeight: true,
+          keyboard: true,
+          prevText: '',
+          nextText: '',
+          itemWidth: 280,
+          itemMargin: 0,
+          minItems: 1,
+          maxItems: 6,
+          move: 1,
+          controlNav: true,
+          directionNav: true,
+          touch: true,
+          animationLoop: false,
+          animationSpeed: 900,
+          start: function(slider) {
+            $('.team__slider_container').attr('style', 'transform: translate3d(-280px, 0px, 0px);');
+          }
+        });
+      }
     });
     $('.team__diploma-close, .team__slider .overlay').click(function () {
       $('.team__diploma-popup, .overlay').css({'opacity': 0, 'display': 'none'});
-      $('body').removeAttr('style');
     });
     $(document).keydown(function(event) {
       if (event.keyCode === 27) {
         event.stopPropagation();
         $('.team__diploma-popup, .overlay').css({'opacity': 0, 'display': 'none'});
-        $('body').removeAttr('style');
+      }
+    });
+  };
+
+  var showPopUpСourse = function () {
+    $('.course__open-ideal-body').click(function (event) {
+      event.preventDefault();
+      $('.course__popup-ideal-body, .overlay').css({'opacity': 1, 'display': 'flex'});
+      if($(window).width() < 751) {
+        $('.course__popup-slider').flexslider({
+          selector: ".course__popup-cost > li",
+          controlsContainer: ".course__popup-flipping",
+          animation: "slide",
+          easing: "swing",
+          slideshow: false,
+          startAt: 1,
+          smoothHeight: true,
+          keyboard: true,
+          prevText: '',
+          nextText: '',
+          itemWidth: 240,
+          itemMargin: 8,
+          move: 1,
+          controlNav: true,
+          directionNav: true,
+          touch: true,
+          animationLoop: true,
+          animationSpeed: 900,
+        });
+      }
+    });
+    $('.course__popup-close, .overlay').click(function () {
+      $('.course__popup-ideal-body, .overlay').css({'opacity': 0, 'display': 'none'});
+      $('body').attr('style', 'overflow: hidden;');
+    });
+    $(document).keydown(function(event) {
+      if (event.keyCode === 27) {
+        event.stopPropagation();
+        $('.course__popup-ideal-body, .overlay').css({'opacity': 0, 'display': 'none'});
+        $('body').attr('style', 'overflow: hidden;');
+      }
+    });
+
+    $('.course__open-beautiful-buttocks').click(function (event) {
+      event.preventDefault();
+      $('.course__popup-beautiful-buttocks, .overlay').css({'opacity': 1, 'display': 'flex'});
+    });
+    $('.course__popup-close, .overlay').click(function () {
+      $('.course__popup-beautiful-buttocks, .overlay').css({'opacity': 0, 'display': 'none'});
+      $('body').attr('style', 'overflow: hidden;');
+    });
+    $(document).keydown(function(event) {
+      if (event.keyCode === 27) {
+        event.stopPropagation();
+        $('.course__popup-beautiful-buttocks, .overlay').css({'opacity': 0, 'display': 'none'});
+        $('body').attr('style', 'overflow: hidden;');
+      }
+    });
+
+    $('.course__open-jodhpurs').click(function (event) {
+      event.preventDefault();
+      $('.course__popup-jodhpurs, .overlay').css({'opacity': 1, 'display': 'flex'});
+    });
+    $('.course__popup-close, .overlay').click(function () {
+      $('.course__popup-jodhpurs, .overlay').css({'opacity': 0, 'display': 'none'});
+      $('body').attr('style', 'overflow: hidden;');
+    });
+    $(document).keydown(function(event) {
+      if (event.keyCode === 27) {
+        event.stopPropagation();
+        $('.course__popup-jodhpurs, .overlay').css({'opacity': 0, 'display': 'none'});
+        $('body').attr('style', 'overflow: hidden;');
+      }
+    });
+
+    $('.course__open-flat-stomach').click(function (event) {
+      event.preventDefault();
+      $('.course__popup-flat-stomach, .overlay').css({'opacity': 1, 'display': 'flex'});
+    });
+    $('.course__popup-close, .overlay').click(function () {
+      $('.course__popup-flat-stomach, .overlay').css({'opacity': 0, 'display': 'none'});
+      $('body').attr('style', 'overflow: hidden;');
+    });
+    $(document).keydown(function(event) {
+      if (event.keyCode === 27) {
+        event.stopPropagation();
+        $('.course__popup-flat-stomach, .overlay').css({'opacity': 0, 'display': 'none'});
+        $('body').attr('style', 'overflow: hidden;');
       }
     });
   };
@@ -373,5 +458,7 @@
   getBlockQuestionsSlider();
   showPopUpVideo();
   showPopUpDiploma();
+  scrollBarСustomization();
+  showPopUpСourse();
 
 }());
