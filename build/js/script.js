@@ -259,15 +259,17 @@
   };
 
   var scrollBarСustomization = function () {
-    $('body').niceScroll({
-      cursorborder: "none",
-      horizrailenabled: false
-    });
-    $('.course__popup').niceScroll({
-      cursorborder: "none",
-      horizrailenabled: false
-    });
     if($(window).width() > 750) {
+
+      $('body').niceScroll({
+        cursorborder: "none",
+        horizrailenabled: false
+      });
+      $('.course__popup').niceScroll({
+        cursorborder: "none",
+        horizrailenabled: false
+      });
+
       $('.team__diploma-popup').niceScroll({
         cursorborder: "none",
         horizrailenabled: false
@@ -290,7 +292,6 @@
           $(evt.target).parents('.course__popup-module').find('.course__popup-hidden').slideToggle('fast', function() {
             $(evt.target).parents('.course__popup-module').toggleClass('active');
           });
-        $('body').getNiceScroll().resize();
       });
     }
   };
