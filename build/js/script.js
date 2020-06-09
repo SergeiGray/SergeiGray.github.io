@@ -353,7 +353,7 @@
         });
       }
     });
-    $('.team__diploma-close, .team__slider .overlay').click(function () {
+    $('.team__diploma-close, .overlay').click(function () {
       $('.team__diploma-popup, .overlay').css({'opacity': 0, 'display': 'none'});
     });
     $(document).keydown(function(event) {
