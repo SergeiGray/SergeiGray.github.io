@@ -760,6 +760,10 @@ body {
       width: 100%; }
     .history__video-play {
       position: absolute;
+      top: 50%;
+      margin-top: -46px;
+      left: 50%;
+      margin-left: -46px;
       width: 92px;
       height: 92px;
       background-color: transparent;
