@@ -281,6 +281,7 @@
         $('.questions__hidden').slideToggle('fast', function() {
           $(evt.target).parents('.item').toggleClass('active');
         });
+      $('body').getNiceScroll().resize();
     });
 
     if($(window).width() < 751) {
@@ -289,6 +290,7 @@
           $(evt.target).parents('.course__popup-module').find('.course__popup-hidden').slideToggle('fast', function() {
             $(evt.target).parents('.course__popup-module').toggleClass('active');
           });
+        $('body').getNiceScroll().resize();
       });
     }
   };
