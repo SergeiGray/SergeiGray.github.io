@@ -1,5 +1,3 @@
-'use strict';
-
 (function () {
 
   var hangFlexslider = function () {
@@ -128,21 +126,34 @@
             $(slider.slides[slider.currentSlide - 1]).addClass('greeting__slider_prev');
           },
           before: function(slider) {
+            // slider.last = slider.count - 1;
+            // if (slider.direction === "next") {
+            //   $(slider.slides).removeClass('greeting__slider_active greeting__slider_next greeting__slider_prev');
+            //   $(slider.slides[slider.currentSlide + 1]).addClass('greeting__slider_active');
+            //   $(slider.slides[slider.currentSlide + 2]).addClass('greeting__slider_next');
+            //   $(slider.slides[slider.currentSlide]).addClass('greeting__slider_prev');
+            // }
+            // if (slider.direction === "prev") {
+            //   $(slider.slides).removeClass('greeting__slider_active greeting__slider_next greeting__slider_prev');
+            //   $(slider.slides[slider.currentSlide - 1]).addClass('greeting__slider_active');
+            //   $(slider.slides[slider.currentSlide]).addClass('greeting__slider_next');
+            //   $(slider.slides[slider.currentSlide - 2]).addClass('greeting__slider_prev');
+            // }
+          },
+          after: function(slider) {
             slider.last = slider.count - 1;
             if (slider.direction === "next") {
               $(slider.slides).removeClass('greeting__slider_active greeting__slider_next greeting__slider_prev');
-              $(slider.slides[slider.currentSlide + 1]).addClass('greeting__slider_active');
-              $(slider.slides[slider.currentSlide + 2]).addClass('greeting__slider_next');
-              $(slider.slides[slider.currentSlide]).addClass('greeting__slider_prev');
+              $(slider.slides[slider.currentSlide]).addClass('greeting__slider_active');
+              $(slider.slides[slider.currentSlide + 1]).addClass('greeting__slider_next');
+              $(slider.slides[slider.currentSlide - 1]).addClass('greeting__slider_prev');
             }
             if (slider.direction === "prev") {
               $(slider.slides).removeClass('greeting__slider_active greeting__slider_next greeting__slider_prev');
-              $(slider.slides[slider.currentSlide - 1]).addClass('greeting__slider_active');
-              $(slider.slides[slider.currentSlide]).addClass('greeting__slider_next');
-              $(slider.slides[slider.currentSlide - 2]).addClass('greeting__slider_prev');
+              $(slider.slides[slider.currentSlide]).addClass('greeting__slider_active');
+              $(slider.slides[slider.currentSlide + 1]).addClass('greeting__slider_next');
+              $(slider.slides[slider.currentSlide - 1]).addClass('greeting__slider_prev');
             }
-          },
-          after: function(slider) {
           }
         });
         $('.result__slider').flexslider({
@@ -262,18 +273,19 @@
   var scrollBarСustomization = function () {
     if($(window).width() > 750) {
 
-      // $('body').niceScroll({
+      // $('html').niceScroll({
       //   cursorborder: "none",
       //   horizrailenabled: false
       // });
-      $('.course__popup').niceScroll({
-        cursorborder: "none",
-        horizrailenabled: false
-      });
-
+      // $('.course__popup').niceScroll({
+      //   cursorborder: "none",
+      //   horizrailenabled: false
+      // });
       $('.team__diploma-popup').niceScroll({
         cursorborder: "none",
-        horizrailenabled: false
+        horizrailenabled: false,
+        cursorcolor:"#ffffff",
+        cursoropacitymin: 0,
       });
     }
   };
@@ -300,32 +312,39 @@
   var showPopUpVideo = function () {
     $('.history__video-play, .history__video-image').click(function (event) {
       event.preventDefault();
-      $('.history__video-iframe, .overlay').css({'opacity': 1, 'display': 'flex'});
+      $('.history__video-iframe, .button__close, .overlay').css({'opacity': 1, 'display': 'flex'});
       $('.history__video-iframe').each(function(){
         this.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*')
       });
+      scrollLock.disablePageScroll();
     });
-    $('.overlay').click(function () {
-      $('.history__video-iframe, .overlay').css({'opacity': 0, 'display': 'none'});
+
+    $(' .button__close, .overlay').click(function () {
+      $('.history__video-iframe, .button__close, .overlay').css({'opacity': 0, 'display': 'none'});
       $('.history__video-iframe').each(function() {
         this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
       });
+      scrollLock.enablePageScroll();
     });
+
     $(document).keydown(function(event) {
       if (event.keyCode === 27) {
         event.stopPropagation();
-        $('.history__video-iframe, .overlay').css({'opacity': 0, 'display': 'none'});
+        $('.history__video-iframe, .button__close, .overlay').css({'opacity': 0, 'display': 'none'});
         $('.history__video-iframe').each(function(){
           this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
         });
+        scrollLock.enablePageScroll();
       }
     });
   };
 
   var showPopUpDiploma = function () {
+    var scrollableElement = document.querySelector('.team__diploma-popup');
     $('.team__diploma-link').click(function (event) {
       event.preventDefault();
-      $('.team__diploma-popup, .overlay').css({'opacity': 1, 'display': 'flex'});
+      $('.team__diploma-popup, .button__close, .overlay').css({'opacity': 1, 'display': 'flex'});
+      scrollLock.disablePageScroll(scrollableElement);
       if($(window).width() < 751) {
         $('.team__slider').flexslider({
           selector: ".team__slider_container > li",
@@ -354,21 +373,25 @@
         });
       }
     });
-    $('.team__diploma-close, .overlay').click(function () {
-      $('.team__diploma-popup, .overlay').css({'opacity': 0, 'display': 'none'});
+    $('.button__close, .overlay').click(function () {
+      $('.team__diploma-popup, .button__close, .overlay').css({'opacity': 0, 'display': 'none'});
+      scrollLock.enablePageScroll(scrollableElement);
     });
     $(document).keydown(function(event) {
       if (event.keyCode === 27) {
         event.stopPropagation();
-        $('.team__diploma-popup, .overlay').css({'opacity': 0, 'display': 'none'});
+        $('.team__diploma-popup, .button__close, .overlay').css({'opacity': 0, 'display': 'none'});
+        scrollLock.enablePageScroll(scrollableElement);
       }
     });
   };
 
-  var showPopUpСourse = function () {
+  var showPopUpIdealBody = function () {
+    var scrollableElement = document.querySelector('.course__popup-ideal-body');
     $('.course__open-ideal-body').click(function (event) {
       event.preventDefault();
-      $('.course__popup-ideal-body, .overlay').css({'opacity': 1, 'display': 'flex'});
+      $('.course__popup-ideal-body, .button__close, .overlay').css({'opacity': 1, 'display': 'flex'});
+      scrollLock.disablePageScroll(scrollableElement);
       if($(window).width() < 751) {
         $('.course__popup-slider').flexslider({
           selector: ".course__popup-cost > li",
@@ -376,7 +399,7 @@
           animation: "slide",
           easing: "swing",
           slideshow: false,
-          startAt: 1,
+          startAt: 0,
           smoothHeight: true,
           keyboard: true,
           prevText: '',
@@ -392,58 +415,82 @@
         });
       }
     });
-    $('.course__popup-close, .overlay').click(function () {
-      $('.course__popup-ideal-body, .overlay').css({'opacity': 0, 'display': 'none'});
+
+    $(' .button__close, .overlay').click(function () {
+      $('.course__popup-ideal-body, .button__close, .overlay').css({'opacity': 0, 'display': 'none'});
+      scrollLock.enablePageScroll(scrollableElement);
     });
     $(document).keydown(function(event) {
       if (event.keyCode === 27) {
         event.stopPropagation();
-        $('.course__popup-ideal-body, .overlay').css({'opacity': 0, 'display': 'none'});
+        $('.course__popup-ideal-body, .button__close, .overlay').css({'opacity': 0, 'display': 'none'});
+        scrollLock.enablePageScroll(scrollableElement);
       }
     });
+  }
 
+  var showPopUpBeautifulButtocks = function () {
+    var scrollableElement = document.querySelector('.course__popup-beautiful-buttocks');
     $('.course__open-beautiful-buttocks').click(function (event) {
       event.preventDefault();
-      $('.course__popup-beautiful-buttocks, .overlay').css({'opacity': 1, 'display': 'flex'});
+      $('.course__popup-beautiful-buttocks, .button__close, .overlay').css({'opacity': 1, 'display': 'flex'});
+      scrollLock.disablePageScroll(scrollableElement);
     });
-    $('.course__popup-close, .overlay').click(function () {
-      $('.course__popup-beautiful-buttocks, .overlay').css({'opacity': 0, 'display': 'none'});
+
+    $(' .button__close, .overlay').click(function () {
+      $('.course__popup-beautiful-buttocks, .button__close, .overlay').css({'opacity': 0, 'display': 'none'});
+      scrollLock.enablePageScroll(scrollableElement);
     });
     $(document).keydown(function(event) {
       if (event.keyCode === 27) {
         event.stopPropagation();
-        $('.course__popup-beautiful-buttocks, .overlay').css({'opacity': 0, 'display': 'none'});
+        $('.course__popup-beautiful-buttocks, .button__close, .overlay').css({'opacity': 0, 'display': 'none'});
+        scrollLock.enablePageScroll(scrollableElement);
       }
     });
+  }
 
+  var showPopUpJodhpurs = function () {
+    var scrollableElement = document.querySelector('.course__popup-jodhpurs');
     $('.course__open-jodhpurs').click(function (event) {
       event.preventDefault();
-      $('.course__popup-jodhpurs, .overlay').css({'opacity': 1, 'display': 'flex'});
-    });
-    $('.course__popup-close, .overlay').click(function () {
-      $('.course__popup-jodhpurs, .overlay').css({'opacity': 0, 'display': 'none'});
-    });
-    $(document).keydown(function(event) {
-      if (event.keyCode === 27) {
-        event.stopPropagation();
-        $('.course__popup-jodhpurs, .overlay').css({'opacity': 0, 'display': 'none'});
-      }
+      $('.course__popup-jodhpurs, .button__close, .overlay').css({'opacity': 1, 'display': 'flex'});
+      scrollLock.disablePageScroll(scrollableElement);
     });
 
-    $('.course__open-flat-stomach').click(function (event) {
-      event.preventDefault();
-      $('.course__popup-flat-stomach, .overlay').css({'opacity': 1, 'display': 'flex'});
-    });
-    $('.course__popup-close, .overlay').click(function () {
-      $('.course__popup-flat-stomach, .overlay').css({'opacity': 0, 'display': 'none'});
+    $(' .button__close, .overlay').click(function () {
+      $('.course__popup-jodhpurs, .button__close, .overlay').css({'opacity': 0, 'display': 'none'});
+      scrollLock.enablePageScroll(scrollableElement);
     });
     $(document).keydown(function(event) {
       if (event.keyCode === 27) {
         event.stopPropagation();
-        $('.course__popup-flat-stomach, .overlay').css({'opacity': 0, 'display': 'none'});
+        $('.course__popup-jodhpurs, .button__close, .overlay').css({'opacity': 0, 'display': 'none'});
+        scrollLock.enablePageScroll(scrollableElement);
       }
     });
-  };
+  }
+
+  var showPopUpFlatStomach = function () {
+    var scrollableElement = document.querySelector('.course__popup-flat-stomach');
+    $('.course__open-flat-stomach').click(function (event) {
+      event.preventDefault();
+      $('.course__popup-flat-stomach, .button__close, .overlay').css({'opacity': 1, 'display': 'flex'});
+      scrollLock.disablePageScroll(scrollableElement);
+    });
+
+    $(' .button__close, .overlay').click(function () {
+      $(' .course__popup-flat-stomach, .button__close, .overlay').css({'opacity': 0, 'display': 'none'});
+      scrollLock.enablePageScroll(scrollableElement);
+    });
+    $(document).keydown(function(event) {
+      if (event.keyCode === 27) {
+        event.stopPropagation();
+        $('.course__popup-flat-stomach, .button__close, .overlay').css({'opacity': 0, 'display': 'none'});
+        scrollLock.enablePageScroll(scrollableElement);
+      }
+    });
+  }
 
   var getShadowMenu = function () {
     if($(window).width() > 750) {
@@ -456,6 +503,7 @@
         }
       });
     };
+
     if($(window).width() < 751) {
       $(window).scroll(function() {
         if($(this).scrollTop() >= 64) {
@@ -475,7 +523,10 @@
   showPopUpVideo();
   showPopUpDiploma();
   scrollBarСustomization();
-  showPopUpСourse();
+  showPopUpIdealBody();
+  showPopUpBeautifulButtocks();
+  showPopUpJodhpurs();
+  showPopUpFlatStomach();
   getShadowMenu();
 
 }());
