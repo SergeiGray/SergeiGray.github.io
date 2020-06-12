@@ -80,24 +80,24 @@
           keyboard: false,
           startAt: 2,
           start: function(slider) {
-            $(slider.slides[slider.currentSlide]).addClass('greeting__slider_active');
-            $(slider.slides[slider.currentSlide + 1]).addClass('greeting__slider_next');
-            $(slider.slides[slider.currentSlide - 1]).addClass('greeting__slider_prev');
-            $('.greeting__slider_container').attr('style', 'transform: translate3d(-624px, 0px, 0px);');
+            $(slider.slides[slider.currentSlide]).addClass('greeting-pupil__slider_active');
+            $(slider.slides[slider.currentSlide + 1]).addClass('greeting-pupil__slider_next');
+            $(slider.slides[slider.currentSlide - 1]).addClass('greeting-pupil__slider_prev');
+            $('.greeting-pupil__slider_container').attr('style', 'transform: translate3d(-624px, 0px, 0px);');
           },
           before: function(slider) {
             slider.last = slider.count - 1;
             if (slider.direction === "next") {
-              $(slider.slides).removeClass('greeting__slider_active greeting__slider_next greeting__slider_prev');
-              $(slider.slides[slider.currentSlide + 1]).addClass('greeting__slider_active');
-              $(slider.slides[slider.currentSlide + 2]).addClass('greeting__slider_next');
-              $(slider.slides[slider.currentSlide]).addClass('greeting__slider_prev');
+              $(slider.slides).removeClass('greeting-pupil__slider_active greeting-pupil__slider_next greeting-pupil__slider_prev');
+              $(slider.slides[slider.currentSlide + 1]).addClass('greeting-pupil__slider_active');
+              $(slider.slides[slider.currentSlide + 2]).addClass('greeting-pupil__slider_next');
+              $(slider.slides[slider.currentSlide]).addClass('greeting-pupil__slider_prev');
             }
             if (slider.direction === "prev") {
-              $(slider.slides).removeClass('greeting__slider_active greeting__slider_next greeting__slider_prev');
-              $(slider.slides[slider.currentSlide - 1]).addClass('greeting__slider_active');
-              $(slider.slides[slider.currentSlide]).addClass('greeting__slider_next');
-              $(slider.slides[slider.currentSlide - 2]).addClass('greeting__slider_prev');
+              $(slider.slides).removeClass('greeting-pupil__slider_active greeting-pupil__slider_next greeting-pupil__slider_prev');
+              $(slider.slides[slider.currentSlide - 1]).addClass('greeting-pupil__slider_active');
+              $(slider.slides[slider.currentSlide]).addClass('greeting-pupil__slider_next');
+              $(slider.slides[slider.currentSlide - 2]).addClass('greeting-pupil__slider_prev');
             }
           },
           after: function(slider) {
