@@ -76,7 +76,7 @@
      });
     }
 
-    if($(window).width() < 1451) {
+    if($(window).width() < 1451 && $(window).width() > 1150) {
       $('.decisions__slider').flexslider({
         selector: ".decisions__slider_container > li",
         controlsContainer: ".decisions__flipping",
@@ -150,12 +150,37 @@
      });
     }
 
+    if($(window).width() < 1151 && $(window).width() > 750) {
+      $('.services__slider').flexslider({
+        selector: ".services__slider_container > li",
+        animation: "slide",
+        easing: "swing",
+        slideshow: false,
+        startAt: 1,
+        smoothHeight: true,
+        keyboard: true,
+        prevText: '',
+        nextText: '',
+        itemWidth: 660,
+        itemMargin: 30,
+        minItems: 1,
+        maxItems: 1,
+        move: 1,
+        controlNav: true,
+        directionNav: false,
+        touch: true,
+        animationLoop: true,
+        animationSpeed: 900,
+        keyboard: false,
+     });
+    }
+
   }
 
   var getShadowMenu = function () {
-    if($(window).width() > 750) {
+    if($(window).width() > 1150) {
       $(window).scroll(function() {
-        if($(this).scrollTop() >= 75) {
+        if($(this).scrollTop() >= 70) {
             $('.header').addClass('header__shadow');
         }
         else{
@@ -164,16 +189,16 @@
       });
     };
 
-    if($(window).width() < 751) {
-      $(window).scroll(function() {
-        if($(this).scrollTop() >= 64) {
-            $('.header').addClass('header__shadow');
-        }
-        else{
-            $('.header').removeClass('header__shadow');
-        }
-      });
-    };
+    // if($(window).width() < 751) {
+    //   $(window).scroll(function() {
+    //     if($(this).scrollTop() >= 64) {
+    //         $('.header').addClass('header__shadow');
+    //     }
+    //     else{
+    //         $('.header').removeClass('header__shadow');
+    //     }
+    //   });
+    // };
   };
 
   var slowScroll = function () {
@@ -220,14 +245,16 @@
         $(itemCheck).prop('checked') ? $(itemShow).removeClass('display_off') && $(itemLink).addClass('active') : $(itemShow).addClass('display_off') && $(itemLink).removeClass('active');
     };
 
-    $(".services .radio__input").change( function() {
-        check('#services_1', '.block_1', '.item_1');
-        check('#services_2', '.block_2', '.item_2');
-        check('#services_3', '.block_3', '.item_3');
-        check('#services_4', '.block_4', '.item_4');
-        check('#services_5', '.block_5', '.item_5');
-        check('#services_6', '.block_6', '.item_6');
-    });
+    if($(window).width() > 1150) {
+      $(".services .radio__input").change( function() {
+          check('#services_1', '.block_1', '.item_1');
+          check('#services_2', '.block_2', '.item_2');
+          check('#services_3', '.block_3', '.item_3');
+          check('#services_4', '.block_4', '.item_4');
+          check('#services_5', '.block_5', '.item_5');
+          check('#services_6', '.block_6', '.item_6');
+      });
+    };
   };
 
   var showMenu = function () {
