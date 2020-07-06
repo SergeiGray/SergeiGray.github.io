@@ -230,9 +230,22 @@
     });
   };
 
+  var showMenu = function () {
+    $('.open_menu').click( function (evt) {
+      evt.preventDefault();
+      $('.menu, .overlay').addClass('display_on');
+    });
+
+    $('.close, .overlay').click( function (evt) {
+      evt.preventDefault();
+      $('.menu, .overlay').removeClass('display_on');
+    });
+  };
+
   hangFlexslider();
   getShadowMenu();
   slowScroll();
   getShowServices();
+  showMenu();
 
 }());
