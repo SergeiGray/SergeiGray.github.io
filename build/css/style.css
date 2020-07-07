@@ -394,6 +394,9 @@ button,
       left: -65px; } }
 
 @media (max-width: 1150px) {
+  body {
+    width: 100vw;
+    overflow-x: hidden; }
   .wrapper {
     max-width: 750px; }
   .logo .image {
@@ -443,6 +446,10 @@ button,
       top: 2px;
       width: 12px;
       height: 12px; } }
+
+@media (max-width: 750px) {
+  .wrapper {
+    max-width: 750px; } }
 
 @font-face {
   font-family: "Montserrat";
