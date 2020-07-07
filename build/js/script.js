@@ -9,7 +9,7 @@
         animation: "slide",
         easing: "swing",
         slideshow: false,
-        startAt: 1,
+        startAt: 0,
         smoothHeight: true,
         keyboard: true,
         prevText: '',
@@ -33,7 +33,7 @@
         animation: "slide",
         easing: "swing",
         slideshow: false,
-        startAt: 1,
+        startAt: 0,
         smoothHeight: true,
         keyboard: true,
         prevText: '',
@@ -83,7 +83,7 @@
         animation: "slide",
         easing: "swing",
         slideshow: false,
-        startAt: 1,
+        startAt: 0,
         smoothHeight: true,
         keyboard: true,
         prevText: '',
@@ -107,7 +107,7 @@
         animation: "slide",
         easing: "swing",
         slideshow: false,
-        startAt: 1,
+        startAt: 0,
         smoothHeight: true,
         keyboard: true,
         prevText: '',
@@ -156,7 +156,7 @@
         animation: "slide",
         easing: "swing",
         slideshow: false,
-        startAt: 1,
+        startAt: 0,
         smoothHeight: true,
         keyboard: true,
         prevText: '',
@@ -167,6 +167,100 @@
         maxItems: 1,
         move: 1,
         controlNav: true,
+        directionNav: false,
+        touch: true,
+        animationLoop: true,
+        animationSpeed: 900,
+        keyboard: false,
+     });
+
+      $('.decisions__slider').flexslider({
+        selector: ".decisions__slider_container > li",
+        animation: "slide",
+        easing: "swing",
+        slideshow: false,
+        startAt: 0,
+        smoothHeight: true,
+        keyboard: true,
+        prevText: '',
+        nextText: '',
+        itemWidth: 285,
+        itemMargin: 24,
+        minItems: 1,
+        maxItems: 6,
+        move: 1,
+        controlNav: true,
+        directionNav: false,
+        touch: true,
+        animationLoop: true,
+        animationSpeed: 900,
+        keyboard: false,
+     });
+
+      $('.timeline__slider').flexslider({
+        selector: ".timeline__slider_container > li",
+        controlsContainer: ".timeline__flipping",
+        animation: "slide",
+        easing: "swing",
+        slideshow: false,
+        startAt: 0,
+        smoothHeight: true,
+        keyboard: true,
+        prevText: '',
+        nextText: '',
+        itemWidth: 720,
+        itemMargin: 0,
+        minItems: 1,
+        maxItems: 1,
+        move: 1,
+        controlNav: false,
+        directionNav: true,
+        touch: true,
+        animationLoop: true,
+        animationSpeed: 900,
+        keyboard: false,
+     });
+
+      $('.experience__slider').flexslider({
+        selector: ".experience__slider_container > li",
+        controlsContainer: ".experience__flipping",
+        animation: "fade",
+        easing: "swing",
+        slideshow: false,
+        startAt: 0,
+        smoothHeight: true,
+        keyboard: true,
+        prevText: '',
+        nextText: '',
+        itemWidth: 720,
+        itemMargin: 0,
+        minItems: 1,
+        maxItems: 1,
+        move: 1,
+        controlNav: false,
+        directionNav: true,
+        touch: true,
+        animationLoop: true,
+        animationSpeed: 900,
+        keyboard: false,
+     });
+
+      $('.customers__slider').flexslider({
+        selector: ".customers__slider_container > li",
+        animation: "slide",
+        easing: "swing",
+        slideshow: false,
+        startAt: 0,
+        smoothHeight: true,
+        keyboard: true,
+        prevText: '',
+        nextText: '',
+        itemWidth: 228,
+        itemMargin: 0,
+        minItems: 1,
+        maxItems: 6,
+        move: 1,
+        controlNav: false,
         directionNav: false,
         touch: true,
         animationLoop: true,
@@ -203,7 +297,7 @@
 
   var slowScroll = function () {
     $(document).ready(function() {
-      if($(window).width() > 750) {
+      if($(window).width() > 1150) {
         $('#landing_scroll_down').click(function (evt) {
           evt.preventDefault();
           $('body').scrollTo(
@@ -214,6 +308,18 @@
           });
         });
       };
+
+      if($(window).width() < 1151 && $(window).width() > 750) {
+        $('#landing_scroll_down').click(function (evt) {
+          evt.preventDefault();
+          $('body').scrollTo(
+            $('#services'), {
+            axis: 'y',
+            duration: 900,
+            offset: 0,
+          });
+        });
+      }
 
       // if($(window).width() < 751) {
       //   $('#landing-link').click(function (evt) {
