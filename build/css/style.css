@@ -1129,7 +1129,7 @@ button,
   .services {
     padding-top: 72px;
     margin-bottom: 70px;
-    overflow-x: hidden; }
+    overflow: hidden; }
     .services .wrapper {
       padding: 0 20px 0; }
     .services .content {
@@ -1194,7 +1194,7 @@ button,
     .services .title {
       margin-bottom: 20px; }
     .services .block {
-      overflow-x: hidden; }
+      overflow: hidden; }
       .services .block .subtitle {
         font-size: 16px;
         margin-bottom: 8px; }
@@ -1625,7 +1625,6 @@ button,
       margin-bottom: 50px; }
     .values .decisions__slider .flex-viewport {
       min-height: 440px !important;
-      padding-left: calc((100% - 384px)/2);
       padding-right: calc((100% - 384px)/2);
       -ms-flex-negative: 0;
           flex-shrink: 0; }
@@ -1636,7 +1635,7 @@ button,
   .values {
     padding-top: 74px;
     padding-bottom: 480px;
-    overflow-x: hidden; }
+    overflow: hidden; }
     .values__title {
       margin-bottom: 30px; }
     .values .wrapper {
@@ -1668,7 +1667,6 @@ button,
       margin-bottom: 40px; }
     .values .decisions__slider .flex-viewport {
       min-height: 354px !important;
-      padding-left: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
       overflow: visible !important; }
@@ -2180,7 +2178,7 @@ button,
 
 @media (max-width: 1150px) {
   .experience {
-    overflow-x: hidden;
+    overflow: hidden;
     margin-bottom: 70px; }
     .experience .wrapper {
       padding: 0 20px 0; }
@@ -2625,7 +2623,7 @@ button,
 
 @media (max-width: 1150px) {
   .partner {
-    overflow-x: hidden; }
+    overflow: hidden; }
     .partner .wrapper {
       padding: 0 20px 0; }
     .partner .subtitle {
