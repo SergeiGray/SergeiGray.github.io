@@ -394,9 +394,6 @@ button,
       left: -65px; } }
 
 @media (max-width: 1150px) {
-  body {
-    width: 100vw;
-    overflow-x: hidden; }
   .wrapper {
     max-width: 750px; }
   .logo .image {
@@ -2311,6 +2308,8 @@ button,
   .experience .customers {
     border: none;
     background-color: transparent; }
+    .experience .customers .container {
+      min-height: 89px; }
     .experience .customers__slider .flex-viewport {
       overflow: visible !important;
       padding-left: 0;
