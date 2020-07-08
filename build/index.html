@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/flexslider.css">
+  <link media="screen and (min-width: 1150px)" rel="stylesheet" type="text/css" href="css/fm.revealator.jquery.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header revealator-load revealator-slidedown revealator-duration15">
     <div class="wrapper">
       <a href="index.html" class="logo">
         <img src="img/logo.png" alt="DTF" class="image" width="37" height="37">
@@ -27,25 +28,25 @@
             <a href="tel:+79169043088" class="tel">+7 916 904 30 88</a>
           </li>
           <li class="item">
-            <a href="index.html" class="link">Услуги</a>
+            <a href="#services" id="go_to_services" class="link">Услуги</a>
           </li>
           <li class="item">
-            <a href="index.html" class="link">Технологии</a>
+            <a href="#technologies" id="go_to_technologies" class="link">Технологии</a>
           </li>
           <li class="item">
-            <a href="index.html" class="link">Ценности</a>
+            <a href="#values" id="go_to_values" class="link">Ценности</a>
           </li>
           <li class="item">
-            <a href="index.html" class="link">Решения</a>
+            <a href="#decisions" id="go_to_decisions" class="link">Решения</a>
           </li>
           <li class="item">
-            <a href="index.html" class="link">Сроки</a>
+            <a href="#timeline" id="go_to_timeline" class="link">Сроки</a>
           </li>
           <li class="item">
-            <a href="index.html" class="link">Опыт</a>
+            <a href="#experience" id="go_to_experience" class="link">Опыт</a>
           </li>
           <li class="item">
-            <a href="index.html" class="link">Контакты</a>
+            <a href="#contacts" id="go_to_contacts" class="link">Контакты</a>
           </li>
           <li class="item inpopup">
             <button class="button">Связаться с нами</button>
@@ -70,14 +71,14 @@
         <video class="video" src="video/glow_cubes.mp4" autoplay muted loop></video>
       </div>
       <div class="wrapper">
-        <h2 class="headline">Цифровизация</h2>
+        <h2 class="headline revealator-load revealator-fade revealator-duration10">Цифровизация</h2>
         <div class="content">
-          <div class="container">
+          <div class="container revealator-load revealator-slideright revealator-duration15">
             <h1 class="title">Цифровые двойники <br>и прогнозная аналитика</h1>
             <p class="text">Всё, что нужно для цифровой трансформации</p>
             <a href="#services" id="landing_scroll_down" class="button button_bg_blue">Подробнее</a>
           </div>
-          <div class="container">
+          <div class="container revealator-load revealator-slideleft revealator-duration15">
             <ul class="list">
               <li class="item">
                 <p class="number">1</p>
@@ -98,13 +99,13 @@
         </div>
       </div>
     </section>
-    <section class="services" id="services">
+    <section class="services">
       <div class="wrapper">
-        <h2 class="title">Какие услуги мы оказываем</h2>
+        <h2 class="title revealator-slideright revealator-once" id="services">Какие услуги мы оказываем</h2>
         <div class="content services__slider">
           <nav class="navigation">
             <ul class="list">
-              <li class="item item_1 active">
+              <li class="item item_1 active revealator-slideup revealator-once revealator-duration20">
                 <input id="services_1" type="radio" name="services__checks" class="radio__input" checked>
                 <label for="services_1" class="radio__label">
                   <p class="number">
@@ -113,7 +114,7 @@
                   <p class="text">Создание цифровых двойников</p>
                 </label>
               </li>
-              <li class="item item_2">
+              <li class="item item_2 revealator-slideup revealator-once revealator-duration18">
                 <input id="services_2" type="radio" name="services__checks" class="radio__input">
                 <label for="services_2" class="radio__label">
                   <p class="number">
@@ -122,7 +123,7 @@
                   <p class="text">Цифровая трансформация на аутсорсинге</p>
                 </label>
               </li>
-              <li class="item item_3">
+              <li class="item item_3 revealator-slideup revealator-once revealator-duration16">
                 <input id="services_3" type="radio" name="services__checks" class="radio__input">
                 <label for="services_3" class="radio__label">
                   <p class="number">
@@ -131,7 +132,7 @@
                   <p class="text">Стратегия и дорожная карта цифровизации</p>
                 </label>
               </li>
-              <li class="item item_4">
+              <li class="item item_4 revealator-slideup revealator-once revealator-duration14">
                 <input id="services_4" type="radio" name="services__checks" class="radio__input">
                 <label for="services_4" class="radio__label">
                   <p class="number">
@@ -140,7 +141,7 @@
                   <p class="text">Быстрая разработка цифровых решений</p>
                 </label>
               </li>
-              <li class="item item_5">
+              <li class="item item_5 revealator-slideup revealator-once revealator-duration12">
                 <input id="services_5" type="radio" name="services__checks" class="radio__input">
                 <label for="services_5" class="radio__label">
                   <p class="number">
@@ -149,7 +150,7 @@
                   <p class="text">Обучение по цифровизации</p>
                 </label>
               </li>
-              <li class="item item_6">
+              <li class="item item_6 revealator-slideup revealator-once revealator-duration10">
                 <input id="services_6" type="radio" name="services__checks" class="radio__input">
                 <label for="services_6" class="radio__label">
                   <p class="number">
@@ -162,13 +163,13 @@
           </nav>
           <ul class="container services__slider_container">
             <li class="block block_1 services__slider_item">
-              <h3 class="subtitle"><span class="color_blue">Создание</span> цифровых двойников</h3>
-              <picture class="image_wrapper">
+              <h3 class="subtitle revealator-slideup revealator-once revealator-duration20"><span class="color_blue">Создание</span> цифровых двойников</h3>
+              <picture class="image_wrapper revealator-slideup revealator-once revealator-duration18">
                 <source media="(max-width: 750px)" srcset="img/services/digital_double_tablet.png">
                 <img src="img/services/digital_double.png" alt="Создание цифровых двойников" class="image">
               </picture>
-              <p class="text">Наша технология создания Цифровых двойников производства или Процесса <span class="color_blue">позволяет получить решение за 3 месяца</span>. Мы используем современные подходы гибридного моделирования для обучения нейронных сетей</p>
-              <a href="" class="link button d  button_bg_blue">Подробнее</a>
+              <p class="text revealator-slideup revealator-once revealator-duration16">Наша технология создания Цифровых двойников производства или Процесса <span class="color_blue">позволяет получить решение за 3 месяца</span>. Мы используем современные подходы гибридного моделирования для обучения нейронных сетей</p>
+              <a href="" class="link button d  button_bg_blue revealator-slideup revealator-once revealator-duration14">Подробнее</a>
             </li>
             <li class="block block_2 display_off services__slider_item">
               <h3 class="subtitle"><span class="color_blue">Цифровая трансформация</span> на аутсорсинге</h3>
@@ -217,7 +218,7 @@
             </li>
           </ul>
         </div>
-        <div class="banner">
+        <div class="banner revealator-slideup revealator-once revealator-duration20">
           <div class="content">
             <h3 class="subtitle">Гибкое и прозрачное ведение проектов</h3>
             <p class="text">Платформенная технология ведения проектов цифровой трансформации, гибко подбирающая участников работы. Современные архитектурные шаблоны, использующие <b>OpenSource</b> и <b>Cloud решения</b></p>
@@ -227,8 +228,8 @@
     </section>
     <section class="technologies">
       <div class="wrapper">
-        <h2 class="title">Технологии Индустрии 4.0 <br>для создания продуктов</h2>
-        <ul class="list">
+        <h2 class="title revealator-slideright revealator-once" id="technologies">Технологии Индустрии 4.0 <br>для создания продуктов</h2>
+        <ul class="list revealator-slideup revealator-once revealator-duration20">
           <li class="item">
             <div class="container">
               <svg class="icon" width="77" height="77">
@@ -286,36 +287,36 @@
         </ul>
       </div>
       <div class="caption">
-        <p class="line">
+        <marquee direction="right" loop="-1" scrollamount="8" class="line">
           <span class="stroke">индустрия 4.0</span>
           <span class="fill">deep learning</span>
           <span class="stroke">цифровизация</span>
           <span class="fill">deep learning</span>
           <span class="stroke">индустрия 4.0</span>
           <span class="fill">цифровизация</span>
-        </p>
-        <p class="line">
+        </marquee>
+        <marquee direction="left" loop="-1" scrollamount="4" class="line">
           <span class="stroke">оптимизация</span>
           <span class="fill">цифровизация</span>
           <span class="stroke">компьютерное зрение</span>
           <span class="fill">цифровизация</span>
           <span class="stroke">оптимизация</span>
           <span class="fill">компьютерное зрение</span>
-        </p>
-        <p class="line">
+        </marquee>
+        <marquee direction="right" loop="-1"  scrollamount="12" class="line">
           <span class="fill">индустрия 4.0</span>
           <span class="stroke">прогнозная аналитика</span>
           <span class="fill">цифровизация</span>
           <span class="stroke">индустрия 4.0</span>
           <span class="fill">прогнозная аналитика</span>
           <span class="stroke">цифровизация</span>
-        </p>
+        </marquee>
       </div>
     </section>
     <section class="values">
       <div class="wrapper">
-        <h2 class="title values__title">Наши ценности</h2>
-        <ul class="list">
+        <h2 class="title values__title  revealator-slideright revealator-once" id="values">Наши ценности</h2>
+        <ul class="list revealator-slideup revealator-once revealator-duration20">
           <li class="item">
             <p class="number">01</p>
             <h3 class="subtitle">Мы цифровой спецназ</h3>
@@ -342,34 +343,44 @@
             <p class="text">Поэтому наш успех внедренный и работающий цифровой продукт Клиента</p>
           </li>
         </ul>
-        <h2 class="title decisions__title">Решения
+        <h2 class="title decisions__title  revealator-slideright revealator-once" id="decisions">Решения
         </h2>
-        <div class="decisions__slider">
+        <div class="decisions__slider revealator-slideup revealator-once revealator-duration20">
           <ul class="decisions__slider_container">
             <li class="decisions__slider_item">
-              <img src="img/decisions/decisions_present_1.png" alt="" class="decisions__slider_image">
-              <p class="decisions__slider_text">Голосовой помощник месторождения добычи нефти и газа</p>
-              <a href="" class="button button_bg_blue">Подробнее</a>
+              <a href="" class="hugging_link">
+                <img src="img/decisions/decisions_present_1.png" alt="" class="decisions__slider_image">
+                <p class="decisions__slider_text">Голосовой помощник месторождения добычи нефти и газа</p>
+                <a href="" class="button button_bg_blue">Подробнее</a>
+              </a>
             </li>
             <li class="decisions__slider_item">
-              <img src="img/decisions/decisions_present_2.png" alt="" class="decisions__slider_image">
-              <p class="decisions__slider_text">Голосовой помощник месторождения добычи нефти и газа</p>
-              <a href="" class="button button_bg_blue">Подробнее</a>
+              <a href="" class="hugging_link">
+                <img src="img/decisions/decisions_present_2.png" alt="" class="decisions__slider_image">
+                <p class="decisions__slider_text">Голосовой помощник месторождения добычи нефти и газа</p>
+                <a href="" class="button button_bg_blue">Подробнее</a>
+              </a>
             </li>
             <li class="decisions__slider_item">
-              <img src="img/decisions/decisions_present_3.png" alt="" class="decisions__slider_image">
-              <p class="decisions__slider_text">Голосовой помощник месторождения добычи нефти и газа</p>
-              <a href="" class="button button_bg_blue">Подробнее</a>
+              <a href="" class="hugging_link">
+                <img src="img/decisions/decisions_present_3.png" alt="" class="decisions__slider_image">
+                <p class="decisions__slider_text">Голосовой помощник месторождения добычи нефти и газа</p>
+                <a href="" class="button button_bg_blue">Подробнее</a>
+              </a>
             </li>
             <li class="decisions__slider_item">
-              <img src="img/decisions/decisions_present_1.png" alt="" class="decisions__slider_image">
-              <p class="decisions__slider_text">Голосовой помощник месторождения добычи нефти и газа</p>
-              <a href="" class="button button_bg_blue">Подробнее</a>
+              <a href="" class="hugging_link">
+                <img src="img/decisions/decisions_present_1.png" alt="" class="decisions__slider_image">
+                <p class="decisions__slider_text">Голосовой помощник месторождения добычи нефти и газа</p>
+                <a href="" class="button button_bg_blue">Подробнее</a>
+              </a>
             </li>
             <li class="decisions__slider_item">
-              <img src="img/decisions/decisions_present_2.png" alt="" class="decisions__slider_image">
-              <p class="decisions__slider_text">Голосовой помощник месторождения добычи нефти и газа</p>
-              <a href="" class="button button_bg_blue">Подробнее</a>
+              <a href="" class="hugging_link">
+                <img src="img/decisions/decisions_present_2.png" alt="" class="decisions__slider_image">
+                <p class="decisions__slider_text">Голосовой помощник месторождения добычи нефти и газа</p>
+                <a href="" class="button button_bg_blue">Подробнее</a>
+              </a>
             </li>
           </ul>
           <div class="decisions__flipping">
@@ -379,9 +390,9 @@
     </section>
     <section class="timeline">
       <div class="wrapper">
-        <h2 class="title">Сроки разработки</h2>
-        <p class="text">Мы умеем работать с высокой скоростью: прототип цифрового продукта <b>от 1.5 месяцев</b>. Внедрение продукта <b>от 5 месяцев</b>.</p>
-        <div class="timeline__slider">
+        <h2 class="title revealator-slideright revealator-once" id="timeline">Сроки разработки</h2>
+        <p class="text revealator-slideleft revealator-once">Мы умеем работать с высокой скоростью: прототип цифрового продукта <b>от 1.5 месяцев</b>. Внедрение продукта <b>от 5 месяцев</b>.</p>
+        <div class="timeline__slider revealator-slideup revealator-once revealator-duration20">
           <ul class="timeline__slider_container">
             <li class="timeline__slider_item">
               <div class="container">
@@ -460,8 +471,8 @@
     </section>
     <section class="experience">
       <div class="wrapper">
-        <h2 class="title">Опыт в нефтегазе</h2>
-        <div class="experience__slider">
+        <h2 class="title revealator-slideright revealator-once" id="experience">Опыт в нефтегазе</h2>
+        <div class="experience__slider revealator-slideup revealator-once revealator-duration20">
           <ul class="experience__slider_container">
             <li class="experience__slider_item">
               <div class="primarily">
@@ -501,9 +512,9 @@
                 <picture class="image_wrapper">
                   <source
                     media="(max-width: 1150px)"
-                    srcset="https://via.placeholder.com/282x346/FF0000">
+                    srcset="img/experience/experience_1_tablet.png">
 
-                  <img src="https://via.placeholder.com/542x447/FF0000" alt="Цифровое месторождение АНК «Башнефть»" class="image">
+                  <img src="img/experience/experience_1.png" alt="Цифровое месторождение АНК «Башнефть»" class="image">
                 </picture>
                 <div class="container">
                   <div class="row">
@@ -533,9 +544,9 @@
                 <picture class="image_wrapper">
                   <source
                     media="(max-width: 1150px)"
-                    srcset="https://via.placeholder.com/282x346/0000FF">
+                    srcset="img/experience/experience_1_tablet.png">
 
-                  <img src="https://via.placeholder.com/542x447/0000FF" alt="Цифровое месторождение АНК «Башнефть»" class="image">
+                  <img src="img/experience/experience_1.png" alt="Цифровое месторождение АНК «Башнефть»" class="image">
                 </picture>
                 <div class="container">
                   <div class="row">
@@ -564,7 +575,7 @@
           <div class="experience__flipping">
           </div>
         </div>
-        <div class="customers customers__slider">
+        <div class="customers customers__slider  revealator-slideup revealator-once revealator-duration16">
           <ul class="customers__slider_container">
             <li class="container customers__slider_item">
               <img src="img/customers/gazprom.png" alt="Газпром" class="image" width="120" height="59">
@@ -587,8 +598,8 @@
     </section>
     <section class="contacts">
       <div class="wrapper">
-        <div class="content">
-          <h2 class="title">Контакты</h2>
+        <div class="content revealator-slideright revealator-once revealator-duration20">
+          <h2 class="title" id="contacts">Контакты</h2>
           <div class="persona">
             <img src="img/oleg_belousov.png" alt="Олег Белоусов" class="image" width="84" height="84">
             <div class="about">
@@ -606,7 +617,7 @@
           <a href="tel:+79169043038" class="link">+7 916 904 30 38</a>
           <a href="mailto:belousov@dtfactory.tech" class="link">belousov@dtfactory.tech</a>
         </div>
-        <form action="" class="form">
+        <form action="" class="form   revealator-slideleft revealator-once revealator-duration20">
           <h3 class="form__title">Связаться с нами</h3>
           <input type="text" class="input" placeholder="Имя" required>
           <input type="tel" class="input" placeholder="Телефон" required>
@@ -621,10 +632,10 @@
         </form>
       </div>
     </section>
-    <section class="partner">
+    <section class="partner" id="partner">
       <div class="wrapper">
-        <h2 class="subtitle">Наши <span class="color_blue">партнеры</span></h2>
-        <div class="customers customers__slider">
+        <h2 class="subtitle revealator-slideright revealator-once revealator-duration20">Наши <span class="color_blue">партнеры</span></h2>
+        <div class="customers customers__slider revealator-slideup revealator-once">
           <ul class="customers__slider_container">
             <li class="container customers__slider_item">
               <img src="img/customers/microsoft.png" alt="Газпром" class="image" width="218" height="54">
@@ -718,6 +729,7 @@
   <script src="js/svgxuse.min.js"></script>
   <script src="js/jquery.flexslider.min.js"></script>
   <script src="js/jquery.scrollTo.min.js"></script>
+  <script src="js/fm.revealator.jquery.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

@@ -215,7 +215,8 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%; }
+  width: 100%;
+  cursor: pointer; }
 
 .button_bg_blue {
   min-height: 60px;
@@ -362,6 +363,11 @@ button,
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); }
+
+.revealator-partially-below {
+  -webkit-transform: skew(0deg, 0deg);
+  transform: skew(0deg, 0deg);
+  opacity: 1; }
 
 @media (max-width: 1450px) {
   .wrapper {
@@ -1213,7 +1219,7 @@ button,
       background-size: 250px auto;
       background-position: calc(50% - 15px) 0; }
       .services .banner .content {
-        max-width: 420px;
+        max-width: 100%;
         margin-bottom: 45px; }
       .services .banner .subtitle {
         font-size: 16px;
@@ -1299,10 +1305,10 @@ button,
       margin-left: -390px;
       margin-bottom: 20px; }
     .technologies .line:nth-child(2) {
-      margin-left: 40px;
+      margin-left: -60px;
       margin-bottom: 20px; }
     .technologies .line:last-child {
-      margin-left: 10px;
+      margin-left: -10px;
       margin-bottom: 95px; }
   .technologies .stroke {
     color: transparent;
@@ -1524,6 +1530,16 @@ button,
 .decisions__title {
   margin-bottom: 60px; }
 
+.decisions .hugging_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  color: #ffffff; }
+
 .decisions__flipping {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1581,7 +1597,8 @@ button,
     font-size: 22px;
     line-height: 142.6%;
     opacity: 0.9;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    color: #ffffff; }
   .decisions__slider .flex-direction-nav a.flex-prev {
     background: #212A37 url("data:image/svg+xml,%3Csvg width='10' height='17' viewBox='0 0 10 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.48528 0L0 8.48528L3.95775e-05 8.48532L8.58307e-06 8.48535L8.48529 16.9706L9.8995 15.5564L2.8284 8.48531L9.8995 1.41421L8.48528 0Z' fill='white'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
@@ -2261,6 +2278,8 @@ button,
         margin: 0 5px 0; }
       .experience__slider_item:first-child {
         margin-right: 5px; }
+      .experience__slider_item .container {
+        min-height: 460px; }
       .experience__slider_item .image_wrapper {
         width: 280px;
         height: 346px;
