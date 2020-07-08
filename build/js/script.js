@@ -594,19 +594,22 @@
     $('.marquee_1').marquee({
       direction: 'right',
       duplicated: true,
-      speed: 40
+      speed: 40,
+      startVisible: true
     });
 
     $('.marquee_2').marquee({
       direction: 'left',
       duplicated: true,
-      speed: 30
+      speed: 30,
+      startVisible: true
     });
 
     $('.marquee_3').marquee({
       direction: 'right',
       duplicated: true,
-      speed: 35
+      speed: 30,
+      startVisible: true
     });
   };
 
