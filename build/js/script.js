@@ -54,7 +54,7 @@
       $('.experience__slider').flexslider({
         selector: ".experience__slider_container > li",
         controlsContainer: ".experience__flipping",
-        animation: "fade",
+        animation: "slide",
         easing: "swing",
         slideshow: false,
         startAt: 0,
@@ -224,7 +224,7 @@
       $('.experience__slider').flexslider({
         selector: ".experience__slider_container > li",
         controlsContainer: ".experience__flipping",
-        animation: "fade",
+        animation: "slide",
         easing: "swing",
         slideshow: false,
         startAt: 0,
@@ -590,10 +590,31 @@
     });
   };
 
+  var getMarquee = function () {
+    $('.marquee_1').marquee({
+      direction: 'right',
+      duplicated: true,
+      speed: 40
+    });
+
+    $('.marquee_2').marquee({
+      direction: 'left',
+      duplicated: true,
+      speed: 30
+    });
+
+    $('.marquee_3').marquee({
+      direction: 'right',
+      duplicated: true,
+      speed: 35
+    });
+  };
+
   hangFlexslider();
   getShadowMenu();
   slowScroll();
   getShowServices();
   showMenu();
+  getMarquee();
 
 }());
