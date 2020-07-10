@@ -10,7 +10,7 @@
         easing: "swing",
         slideshow: false,
         startAt: 0,
-        smoothHeight: true,
+        smoothHeight: false,
         keyboard: true,
         prevText: '',
         nextText: '',
@@ -34,7 +34,7 @@
         easing: "swing",
         slideshow: false,
         startAt: 0,
-        smoothHeight: true,
+        smoothHeight: false,
         keyboard: true,
         prevText: '',
         nextText: '',
@@ -58,7 +58,7 @@
         easing: "swing",
         slideshow: false,
         startAt: 0,
-        smoothHeight: true,
+        smoothHeight: false,
         keyboard: true,
         prevText: '',
         nextText: '',
@@ -73,6 +73,15 @@
         animationLoop: true,
         animationSpeed: 900,
         keyboard: false,
+        start: function(slider) {
+          $('.experience__counter_total').text(slider.count);
+          $('.experience__counter_index').text(slider.currentSlide + 1);
+        },
+        before: function(slider) {
+        },
+        after: function(slider) {
+          $('.experience__counter_index').text(slider.currentSlide + 1);
+        }
      });
     }
 
@@ -84,7 +93,7 @@
         easing: "swing",
         slideshow: false,
         startAt: 0,
-        smoothHeight: true,
+        smoothHeight: false,
         keyboard: true,
         prevText: '',
         nextText: '',
@@ -108,7 +117,7 @@
         easing: "swing",
         slideshow: false,
         startAt: 0,
-        smoothHeight: true,
+        smoothHeight: false,
         keyboard: true,
         prevText: '',
         nextText: '',
@@ -128,11 +137,11 @@
       $('.experience__slider').flexslider({
         selector: ".experience__slider_container > li",
         controlsContainer: ".experience__flipping",
-        animation: "fade",
+        animation: "slide",
         easing: "swing",
         slideshow: false,
         startAt: 0,
-        smoothHeight: true,
+        smoothHeight: false,
         keyboard: true,
         prevText: '',
         nextText: '',
@@ -147,6 +156,16 @@
         animationLoop: true,
         animationSpeed: 900,
         keyboard: false,
+        start: function(slider) {
+          $('.experience__counter_total').text(slider.count);
+          $('.experience__counter_index').text(slider.currentSlide + 1);
+        },
+        before: function(slider) {
+          $('.experience__counter_index').text(slider.currentSlide + 1);
+        },
+        after: function(slider) {
+          $('.experience__counter_index').text(slider.currentSlide + 1);
+        }
      });
     }
 
@@ -187,7 +206,7 @@
         itemWidth: 285,
         itemMargin: 24,
         minItems: 1,
-        maxItems: 6,
+        maxItems: 1,
         move: 1,
         controlNav: true,
         directionNav: false,
@@ -243,6 +262,15 @@
         animationLoop: true,
         animationSpeed: 900,
         keyboard: false,
+        start: function(slider) {
+          $('.experience__counter_total').text(slider.count);
+          $('.experience__counter_index').text(slider.currentSlide + 1);
+        },
+        before: function(slider) {
+        },
+        after: function(slider) {
+          $('.experience__counter_index').text(slider.currentSlide + 1);
+        }
      });
 
       $('.customers__slider').flexslider({
@@ -281,9 +309,9 @@
         prevText: '',
         nextText: '',
         itemWidth: 276,
-        itemMargin: 30,
+        itemMargin: 10,
         minItems: 1,
-        maxItems: 1,
+        maxItems: 6,
         move: 1,
         controlNav: true,
         directionNav: false,
