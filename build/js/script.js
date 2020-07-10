@@ -427,17 +427,6 @@
         }
       });
     };
-
-    // if($(window).width() < 751) {
-    //   $(window).scroll(function() {
-    //     if($(this).scrollTop() >= 64) {
-    //         $('.header').addClass('header__shadow');
-    //     }
-    //     else{
-    //         $('.header').removeClass('header__shadow');
-    //     }
-    //   });
-    // };
   };
 
   var slowScroll = function () {
@@ -640,6 +629,10 @@
       startVisible: true
     });
   };
+
+  $(window).on("orientationchange",function(event){
+    location.reload();
+  });
 
   hangFlexslider();
   getShadowMenu();
