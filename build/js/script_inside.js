@@ -242,7 +242,6 @@
 
       $('.experience__slider').flexslider({
         selector: ".experience__slider_container > li",
-        controlsContainer: ".experience__flipping",
         animation: "slide",
         easing: "swing",
         slideshow: false,
@@ -251,26 +250,17 @@
         keyboard: true,
         prevText: '',
         nextText: '',
-        itemWidth: 720,
-        itemMargin: 0,
+        itemWidth: 660,
+        itemMargin: 30,
         minItems: 1,
-        maxItems: 1,
+        maxItems: 6,
         move: 1,
-        controlNav: false,
-        directionNav: true,
+        controlNav: true,
+        directionNav: false,
         touch: true,
         animationLoop: true,
         animationSpeed: 900,
         keyboard: false,
-        start: function(slider) {
-          $('.experience__counter_total').text(slider.count);
-          $('.experience__counter_index').text(slider.currentSlide + 1);
-        },
-        before: function(slider) {
-        },
-        after: function(slider) {
-          $('.experience__counter_index').text(slider.currentSlide + 1);
-        }
       });
 
       $('.customers__slider').flexslider({
