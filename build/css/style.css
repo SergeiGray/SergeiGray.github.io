@@ -406,7 +406,8 @@ button,
 
 @media (max-width: 1150px) {
   .wrapper {
-    max-width: 750px; }
+    max-width: 750px;
+    padding: 0 20px 0; }
   .logo .image {
     width: 23px;
     height: 23px;
@@ -457,7 +458,8 @@ button,
 
 @media (max-width: 750px) {
   .wrapper {
-    max-width: 100%; }
+    max-width: 100%;
+    padding: 0 10px 0; }
   .button_bg_blue,
   .button_stroke_blue {
     min-height: 38px; }
@@ -943,7 +945,7 @@ button,
     .landing::before {
       display: none; }
     .landing .wrapper {
-      padding: 65px 20px 0; }
+      padding-top: 65px; }
     .landing .headline {
       font-size: 70px;
       margin-bottom: 27px;
@@ -977,7 +979,7 @@ button,
     margin-top: -51px; }
     .landing .wrapper {
       overflow: hidden;
-      padding: 70px 0 0 14px; }
+      padding-top: 70px; }
     .landing .headline {
       font-size: 54px;
       margin-bottom: 30px;
@@ -1047,11 +1049,12 @@ button,
     display: flex;
     min-width: 328px;
     min-height: 105px;
-    margin-bottom: 5px;
     font-size: 16px;
     line-height: 140%;
     color: #808080;
     cursor: pointer; }
+    .services .item:not(:last-child) {
+      margin-bottom: 5px; }
     .services .item .number {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1099,6 +1102,9 @@ button,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     color: #0C1C32; }
     .services .block .subtitle {
       font-weight: bold;
@@ -1173,8 +1179,6 @@ button,
     padding-top: 72px;
     margin-bottom: 70px;
     overflow: hidden; }
-    .services .wrapper {
-      padding: 0 20px 0; }
     .services .content {
       margin-bottom: 95px; }
     .services .title {
@@ -1237,8 +1241,6 @@ button,
   .services {
     padding-top: 50px;
     margin-bottom: 52px; }
-    .services .wrapper {
-      padding: 0 10px 0 14px; }
     .services .content {
       margin-bottom: 80px; }
     .services .title {
@@ -1246,6 +1248,7 @@ button,
     .services .block {
       overflow: hidden; }
       .services .block .subtitle {
+        min-height: 46px;
         font-size: 16px;
         margin-bottom: 12px; }
       .services .block .image_wrapper {
@@ -1407,8 +1410,6 @@ button,
 @media (max-width: 1150px) {
   .technologies {
     padding-top: 74px; }
-    .technologies .wrapper {
-      padding: 0 20px 0; }
     .technologies .container {
       margin-bottom: 10px; }
     .technologies .title {
@@ -1453,8 +1454,6 @@ button,
 @media (max-width: 750px) {
   .technologies {
     padding-top: 50px; }
-    .technologies .wrapper {
-      padding: 0 10px 0 14px; }
     .technologies .title {
       margin-bottom: 35px; }
     .technologies .container {
@@ -1693,7 +1692,9 @@ button,
       -ms-flex-negative: 0;
           flex-shrink: 0; }
     .values .decisions__slider_item {
-      width: 360px; } }
+      width: 360px; }
+    .values .decisions__slider_text {
+      min-height: 62px; } }
 
 @media (max-width: 1150px) {
   .values {
@@ -1702,8 +1703,6 @@ button,
     overflow: hidden; }
     .values__title {
       margin-bottom: 30px; }
-    .values .wrapper {
-      padding: 0 20px 0; }
     .values .list {
       margin-bottom: 15px; }
     .values .item {
@@ -1741,6 +1740,7 @@ button,
     .values .decisions__slider_image {
       margin-bottom: 15px; }
     .values .decisions__slider_text {
+      min-height: 52px;
       font-size: 18px; }
     .values .decisions__slider .flex-control-nav {
       bottom: -50px; }
@@ -1757,8 +1757,6 @@ button,
   .values {
     padding-top: 50px;
     padding-bottom: 585px; }
-    .values .wrapper {
-      padding: 0 10px 0 14px; }
     .values .list {
       margin-bottom: 40px; }
     .values .item {
@@ -1793,6 +1791,7 @@ button,
     .values .decisions__slider_image {
       margin-bottom: 15px; }
     .values .decisions__slider_text {
+      min-height: 46px;
       font-size: 16px;
       margin-bottom: 25px; }
     .values .decisions__slider .button_bg_blue {
@@ -1927,8 +1926,6 @@ button,
 @media (max-width: 1150px) {
   .timeline {
     margin-bottom: 72px; }
-    .timeline .wrapper {
-      padding: 0 20px 0; }
     .timeline .title {
       margin-bottom: 20px; }
     .timeline .text {
@@ -1985,8 +1982,6 @@ button,
   .timeline {
     margin-top: -495px;
     margin-bottom: 63px; }
-    .timeline .wrapper {
-      padding: 0 10px 0 14px; }
     .timeline .title {
       margin-bottom: 15px; }
     .timeline .text {
@@ -2279,8 +2274,6 @@ button,
   .experience {
     overflow: hidden;
     margin-bottom: 70px; }
-    .experience .wrapper {
-      padding: 0 20px 0; }
     .experience .title {
       margin-bottom: 30px; }
     .experience__counter {
@@ -2349,8 +2342,6 @@ button,
 @media (max-width: 750px) {
   .experience {
     margin-bottom: 50px; }
-    .experience .wrapper {
-      padding: 0 10px 0 14px; }
     .experience__counter {
       display: none; }
     .experience__slider {
@@ -2619,8 +2610,7 @@ button,
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column;
-      padding: 0 20px 0; }
+              flex-direction: column; }
     .contacts .title {
       margin-bottom: 30px; }
     .contacts .content {
@@ -2670,8 +2660,6 @@ button,
 @media (max-width: 750px) {
   .contacts {
     margin-bottom: 40px; }
-    .contacts .wrapper {
-      padding: 0 10px 0 14px; }
     .contacts .item:not(:last-child) {
       margin-bottom: 3px; }
     .contacts .content {
@@ -2709,10 +2697,11 @@ button,
         .contacts .form .input:not(:last-child) {
           margin-bottom: 12px; }
         .contacts .form .input:nth-child(2) {
-          width: 317px;
-          margin-right: auto; }
+          width: 100%;
+          margin-right: 0; }
         .contacts .form .input:nth-child(3) {
-          width: 317px; }
+          width: 100%;
+          margin-right: 0; }
       .contacts .form .button_stroke_white {
         width: 100%;
         min-height: 38px;
@@ -2778,8 +2767,6 @@ button,
 @media (max-width: 1150px) {
   .partner {
     overflow: hidden; }
-    .partner .wrapper {
-      padding: 0 20px 0; }
     .partner .subtitle {
       font-size: 20px;
       margin-bottom: 30px; }
@@ -2816,8 +2803,6 @@ button,
 @media (max-width: 750px) {
   .partner {
     margin-bottom: 55px; }
-    .partner .wrapper {
-      padding: 0 10px 0 14px; }
     .partner .subtitle {
       font-size: 16px; }
     .partner .customers {
@@ -3031,8 +3016,6 @@ button,
     margin-top: 0; } }
 
 @media (max-width: 1150px) {
-  .footer .wrapper {
-    padding: 0 20px 0; }
   .footer .logo .image {
     width: 26px;
     height: 26px; }
@@ -3066,8 +3049,7 @@ button,
 @media (max-width: 750px) {
   .footer .wrapper {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    padding: 0 10px 0 14px; }
+        flex-wrap: wrap; }
   .footer .top {
     padding: 17px 0 28px; }
   .footer .communication {
@@ -3431,7 +3413,9 @@ button,
     max-width: 100%;
     width: 100%;
     margin: 0;
-    padding: 67px 65px 90px; }
+    padding: 67px 65px 90px;
+    background: #2482FF url("../img/form_bg.png") no-repeat center center;
+    background-size: cover; }
     .pages-for-services .contacts .form__title {
       font-size: 26px; }
     .pages-for-services .contacts .form .row {
@@ -3823,7 +3807,7 @@ button,
 
 @media (max-width: 750px) {
   .pages-for-services .wrapper {
-    padding: 0 10px 0 20px; }
+    padding: 0 15px 0 15px; }
   .pages-for-services .header {
     margin-bottom: 23px; }
   .pages-for-services .breadcrumbs {
@@ -4036,5 +4020,1141 @@ button,
         font-size: 12px;
         line-height: 132.69%;
         padding: 0 18px 0 22px; } }
+
+.pages-for-solutions .header {
+  background-color: #030B16;
+  margin-bottom: 0; }
+
+.pages-for-solutions .breadcrumbs {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  margin-bottom: 55px; }
+  .pages-for-solutions .breadcrumbs .crumb {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .pages-for-solutions .breadcrumbs .link {
+    color: #ffffff;
+    opacity: 1;
+    -webkit-transition: .5s;
+    transition: .5s; }
+    .pages-for-solutions .breadcrumbs .link:hover {
+      opacity: 0.6; }
+  .pages-for-solutions .breadcrumbs .separation-dot {
+    margin: 0 5px 0; }
+
+.pages-for-solutions .title {
+  color: #ffffff;
+  margin-bottom: 18px; }
+
+.pages-for-solutions .subtitle {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 158.6%; }
+
+.pages-for-solutions .text-under-image {
+  font-size: 18px;
+  line-height: 181.69%;
+  color: #ffffff;
+  margin-bottom: 68px; }
+
+.pages-for-solutions .top-block {
+  margin-bottom: 70px;
+  background: #236ac8 url("../img/decisions/inside_voice_assistant.png") no-repeat center bottom;
+  background-size: contain; }
+  .pages-for-solutions .top-block .wrapper {
+    padding-top: 32px; }
+
+.pages-for-solutions .tasks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 110px; }
+  .pages-for-solutions .tasks .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%; }
+  .pages-for-solutions .tasks .subtitle {
+    margin-bottom: 27px; }
+  .pages-for-solutions .tasks .functions {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 158.6%;
+    opacity: 0.9;
+    margin-bottom: 40px; }
+  .pages-for-solutions .tasks .text {
+    line-height: 160%; }
+    .pages-for-solutions .tasks .text:not(:last-of-type) {
+      margin-bottom: 60px; }
+    .pages-for-solutions .tasks .text:last-of-type {
+      margin-bottom: 53px; }
+  .pages-for-solutions .tasks .explanation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 158px;
+    width: 100%;
+    padding: 28px 20px 34px 60px;
+    border: 2px solid #2482FF;
+    border-radius: 1px; }
+    .pages-for-solutions .tasks .explanation .icon {
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      margin-right: 20px; }
+    .pages-for-solutions .tasks .explanation .text {
+      margin: 0;
+      font-weight: 600;
+      font-size: 18px; }
+
+.pages-for-solutions .customers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px; }
+  .pages-for-solutions .customers .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    min-height: 230px;
+    width: 20%;
+    padding: 58px 30px 10px;
+    background-color: #ffffff; }
+    .pages-for-solutions .customers .container:not(:last-child) {
+      border-right: 1px solid rgba(0, 0, 0, 0.1); }
+    .pages-for-solutions .customers .container .icon {
+      height: 54px;
+      margin-bottom: 19px; }
+    .pages-for-solutions .customers .container .text {
+      margin: 0; }
+
+.pages-for-solutions .technology {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .pages-for-solutions .technology .subtitle {
+    margin-bottom: 15px; }
+  .pages-for-solutions .technology .text {
+    line-height: 160%;
+    margin-bottom: 45px; }
+  .pages-for-solutions .technology .list {
+    background: #2482FF url("../img/form_bg.png") no-repeat center center;
+    background-size: cover; }
+  .pages-for-solutions .technology .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 33.3333%;
+    min-height: 266px;
+    padding: 40px 17px 20px 43px;
+    color: #ffffff; }
+    .pages-for-solutions .technology .item:nth-child(2) {
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      border-left: 1px solid rgba(255, 255, 255, 0.1); }
+    .pages-for-solutions .technology .item .number {
+      font-family: Furore, Arial, sans-serif;
+      font-size: 50px;
+      letter-spacing: 0.05em;
+      color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: rgba(255, 255, 255, 0.3);
+      text-transform: uppercase;
+      margin-bottom: 15px; }
+    .pages-for-solutions .technology .item .name {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 197.69%;
+      margin-bottom: 12px; }
+    .pages-for-solutions .technology .item .text {
+      font-size: 16px;
+      line-height: 149.69%;
+      opacity: 0.8;
+      margin: 0; }
+
+.pages-for-solutions .scenarios {
+  min-height: 597px;
+  padding-top: 240px;
+  margin-top: -130px;
+  margin-bottom: 120px;
+  background: #030b16 url("../img/team_bg.png") no-repeat center center;
+  background-size: cover;
+  color: #ffffff; }
+  .pages-for-solutions .scenarios .list {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 35px;
+    margin-bottom: 96px; }
+  .pages-for-solutions .scenarios .item {
+    width: 100%;
+    margin-bottom: 38px; }
+  .pages-for-solutions .scenarios .subtitle {
+    margin-bottom: 40px; }
+  .pages-for-solutions .scenarios .number {
+    font-family: Furore, Arial, sans-serif;
+    font-size: 50px;
+    letter-spacing: 0.05em;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    margin-bottom: 15px; }
+  .pages-for-solutions .scenarios .text {
+    font-size: 16px;
+    line-height: 167.69%; }
+    .pages-for-solutions .scenarios .text:first-child {
+      position: relative;
+      font-weight: bold;
+      line-height: 206.69%; }
+      .pages-for-solutions .scenarios .text:first-child:before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: -35px;
+        width: 8px;
+        height: 8px;
+        background-color: #ffffff;
+        border: 4px solid #509bff; }
+
+.pages-for-solutions .experience {
+  margin-bottom: 112px; }
+  .pages-for-solutions .experience .subtitle {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 158.6%;
+    margin-bottom: 40px; }
+  .pages-for-solutions .experience .text {
+    line-height: 160%; }
+  .pages-for-solutions .experience .container .subtitle {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 174.1%;
+    margin-bottom: 10px; }
+  .pages-for-solutions .experience .description {
+    font-size: 18px;
+    line-height: 197.69%;
+    margin-bottom: 40px; }
+  .pages-for-solutions .experience .list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 34px; }
+  .pages-for-solutions .experience .separator_line {
+    height: 64px;
+    width: 1px;
+    margin: 0 26px 0;
+    background-color: #e5e5e5; }
+  .pages-for-solutions .experience .item {
+    padding: 0;
+    margin: 0; }
+    .pages-for-solutions .experience .item:before {
+      display: none; }
+    .pages-for-solutions .experience .item:first-child {
+      width: 18%; }
+    .pages-for-solutions .experience .item:nth-child(3) {
+      width: 25%; }
+    .pages-for-solutions .experience .item .number {
+      font-family: Furore, Arial, sans-serif;
+      font-size: 36px;
+      line-height: 136.6%;
+      letter-spacing: 0.05em;
+      color: #2482FF;
+      opacity: 0.9;
+      margin-bottom: 6px; }
+    .pages-for-solutions .experience .item .text {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 149.69%;
+      opacity: 0.7;
+      margin: 0; }
+  .pages-for-solutions .experience__slider {
+    margin: 0; }
+    .pages-for-solutions .experience__slider_container {
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
+    .pages-for-solutions .experience__slider_item .button_bg_blue {
+      padding: 0 55px 0; }
+
+.pages-for-solutions .effects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-bottom: 110px; }
+  .pages-for-solutions .effects .list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .pages-for-solutions .effects .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 167px;
+    width: 50%;
+    padding: 0 75px 0 84px;
+    border: 1px solid rgba(0, 0, 0, 0.1); }
+  .pages-for-solutions .effects .subtitle {
+    margin-bottom: 33px; }
+  .pages-for-solutions .effects .number {
+    font-family: Furore, Arial, sans-serif;
+    font-size: 50px;
+    line-height: 158.6%;
+    color: #2482FF;
+    margin-right: 35px; }
+  .pages-for-solutions .effects .text {
+    line-height: 164.69%; }
+
+.pages-for-solutions .contacts {
+  width: 100%;
+  margin-bottom: 80px; }
+  .pages-for-solutions .contacts .text {
+    line-height: 160%; }
+  .pages-for-solutions .contacts .form {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 67px 65px 90px;
+    background: #2482FF url("../img/form_bg.png") no-repeat center center;
+    background-size: cover; }
+    .pages-for-solutions .contacts .form__title {
+      font-size: 26px; }
+    .pages-for-solutions .contacts .form .row {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .pages-for-solutions .contacts .form .input, .pages-for-solutions .contacts .form .submit {
+      width: 32%;
+      height: 70px;
+      margin-bottom: 27px; }
+
+.pages-for-solutions .neighbors {
+  width: 100%;
+  margin-bottom: 160px; }
+  .pages-for-solutions .neighbors .list {
+    width: 100%; }
+  .pages-for-solutions .neighbors .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 145px;
+    width: 33.3333%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 157.19%; }
+    .pages-for-solutions .neighbors .item:first-child {
+      border-right-color: transparent; }
+      .pages-for-solutions .neighbors .item:first-child .icon {
+        margin-right: 20px; }
+    .pages-for-solutions .neighbors .item:last-child {
+      border-left-color: transparent; }
+      .pages-for-solutions .neighbors .item:last-child .icon {
+        margin-left: 20px; }
+  .pages-for-solutions .neighbors .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .pages-for-solutions .neighbors .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6; }
+    .pages-for-solutions .neighbors .link:hover .icon {
+      fill: #2482FF; }
+    .pages-for-solutions .neighbors .link:hover .text {
+      color: #2482FF; }
+    .pages-for-solutions .neighbors .link .icon {
+      fill: #0C1C32;
+      -webkit-transition: .5s;
+      transition: .5s; }
+  .pages-for-solutions .neighbors .prev {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 70px; }
+    .pages-for-solutions .neighbors .prev .container {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+    .pages-for-solutions .neighbors .prev .text {
+      text-align: left; }
+  .pages-for-solutions .neighbors .next {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 70px; }
+    .pages-for-solutions .neighbors .next .container {
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end; }
+    .pages-for-solutions .neighbors .next .text {
+      text-align: right; }
+  .pages-for-solutions .neighbors .text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 157.19%;
+    color: #0C1C32;
+    -webkit-transition: .5s;
+    transition: .5s; }
+
+@media (max-width: 1450px) {
+  .pages-for-solutions .breadcrumbs {
+    margin-bottom: 15px; }
+  .pages-for-solutions .title {
+    margin-bottom: 8px; }
+  .pages-for-solutions .main_image {
+    margin-bottom: 22px; }
+  .pages-for-solutions .text-under-image {
+    font-size: 16px;
+    margin-bottom: 40px; }
+  .pages-for-solutions .subtitle {
+    font-size: 26px; }
+  .pages-for-solutions .top-block {
+    margin-bottom: 43px; }
+  .pages-for-solutions .answers {
+    margin-bottom: 103px; }
+    .pages-for-solutions .answers .text {
+      font-size: 14px; }
+  .pages-for-solutions .time {
+    margin-top: 85px;
+    padding: 37px 20px 65px 30px; }
+    .pages-for-solutions .time .subtitle {
+      font-size: 18px;
+      margin-bottom: 38px; }
+    .pages-for-solutions .time .indicators:nth-child(1) {
+      width: 52%; }
+    .pages-for-solutions .time .indicators:nth-child(2) {
+      width: 43%; }
+    .pages-for-solutions .time .indicators:nth-child(3) {
+      width: 54%; }
+  .pages-for-solutions .value .item:not(:last-child) {
+    margin-bottom: 50px; }
+  .pages-for-solutions .tasks {
+    background-position: left 18%;
+    background-size: 23%;
+    margin-bottom: 90px; }
+    .pages-for-solutions .tasks .content {
+      width: 100%; }
+    .pages-for-solutions .tasks .text:not(:last-of-type) {
+      margin-bottom: 50px; }
+    .pages-for-solutions .tasks .text:last-of-type {
+      margin-bottom: 45px; }
+    .pages-for-solutions .tasks .functions {
+      margin-bottom: 35px; }
+    .pages-for-solutions .tasks .explanation {
+      min-height: 112px;
+      padding: 23px 15px 28px 36px; }
+      .pages-for-solutions .tasks .explanation .icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 20px; }
+      .pages-for-solutions .tasks .explanation .text {
+        margin: 0;
+        font-weight: 600;
+        font-size: 16px; }
+  .pages-for-solutions .customers {
+    margin-bottom: 30px; }
+    .pages-for-solutions .customers .container {
+      min-height: 196px;
+      padding: 35px 32px 10px; }
+      .pages-for-solutions .customers .container .text {
+        font-size: 14px;
+        margin: 0; }
+  .pages-for-solutions .technology .text {
+    margin-bottom: 30px; }
+  .pages-for-solutions .technology .item {
+    min-height: 264px;
+    padding: 37px 30px 20px 50px; }
+    .pages-for-solutions .technology .item .number {
+      margin-bottom: 15px; }
+    .pages-for-solutions .technology .item .name {
+      font-size: 16px;
+      margin-bottom: 0; }
+    .pages-for-solutions .technology .item .text {
+      font-size: 14px; }
+  .pages-for-solutions .scenarios {
+    min-height: 497px;
+    margin-top: -152px;
+    padding-top: 240px;
+    margin-bottom: 80px; }
+    .pages-for-solutions .scenarios .subtitle {
+      margin-bottom: 25px; }
+    .pages-for-solutions .scenarios .text {
+      font-size: 14px; }
+      .pages-for-solutions .scenarios .text .color_blue {
+        font-size: 16px; }
+    .pages-for-solutions .scenarios .list {
+      margin-bottom: 65px; }
+    .pages-for-solutions .scenarios .item {
+      margin-bottom: 22px; }
+  .pages-for-solutions .experience {
+    margin-bottom: 90px; }
+    .pages-for-solutions .experience .subtitle {
+      font-size: 26px; }
+    .pages-for-solutions .experience .container .subtitle {
+      line-height: 145%; }
+    .pages-for-solutions .experience .description {
+      margin-bottom: 10px; }
+    .pages-for-solutions .experience .text {
+      font-size: 16px; }
+    .pages-for-solutions .experience .list {
+      margin-bottom: 20px; }
+    .pages-for-solutions .experience .item:first-child {
+      width: 23%; }
+    .pages-for-solutions .experience .item:nth-child(3) {
+      width: 29%; }
+    .pages-for-solutions .experience .item .text {
+      font-size: 12px; }
+  .pages-for-solutions .effects {
+    margin-bottom: 92px; }
+    .pages-for-solutions .effects .item {
+      min-height: 140px;
+      padding-left: 45px; }
+    .pages-for-solutions .effects .subtitle {
+      margin-bottom: 30px; }
+    .pages-for-solutions .effects .text {
+      font-size: 14px; }
+  .pages-for-solutions .contacts {
+    margin-bottom: 69px; }
+    .pages-for-solutions .contacts .form {
+      padding: 53px 45px 72px; }
+      .pages-for-solutions .contacts .form__title {
+        font-size: 26px; }
+      .pages-for-solutions .contacts .form .input, .pages-for-solutions .contacts .form .submit {
+        height: 60px;
+        margin-bottom: 23px; }
+  .pages-for-solutions .neighbors {
+    margin-bottom: 90px; }
+    .pages-for-solutions .neighbors .text {
+      font-size: 14px; }
+    .pages-for-solutions .neighbors .item {
+      min-height: 118px; }
+    .pages-for-solutions .neighbors .prev {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      padding-left: 40px; }
+    .pages-for-solutions .neighbors .next {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      padding-right: 40px; } }
+
+@media (max-width: 1150px) {
+  .pages-for-solutions .header .logo {
+    margin-left: 0; }
+  .pages-for-solutions .breadcrumbs {
+    margin-bottom: 23px; }
+  .pages-for-solutions .title {
+    margin-bottom: 18px; }
+  .pages-for-solutions .main_image {
+    overflow: hidden;
+    height: 187px;
+    margin-bottom: 22px; }
+  .pages-for-solutions .text-under-image {
+    font-size: 16px;
+    line-height: 169%;
+    margin-bottom: 36px; }
+  .pages-for-solutions .subtitle {
+    font-size: 20px; }
+    .pages-for-solutions .subtitle br {
+      display: none; }
+  .pages-for-solutions .top-block {
+    margin-bottom: 30px; }
+    .pages-for-solutions .top-block .wrapper {
+      padding-top: 20px; }
+  .pages-for-solutions .answers {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 70px; }
+  .pages-for-solutions .value {
+    width: 100%;
+    margin-bottom: 35px; }
+    .pages-for-solutions .value .subtitle {
+      margin-bottom: 10px; }
+    .pages-for-solutions .value .item:not(:last-child) {
+      margin-bottom: 12px; }
+    .pages-for-solutions .value .number {
+      font-size: 40px;
+      margin: 0; }
+    .pages-for-solutions .value .text {
+      font-size: 12px; }
+  .pages-for-solutions .time {
+    width: 100%;
+    margin-top: 0;
+    padding-bottom: 30px; }
+    .pages-for-solutions .time .subtitle {
+      font-size: 16px;
+      margin-bottom: 19px; }
+    .pages-for-solutions .time .indicators:nth-child(1) {
+      width: 37.333%; }
+    .pages-for-solutions .time .indicators:nth-child(2) {
+      width: 29%;
+      padding-right: 20px; }
+    .pages-for-solutions .time .indicators:nth-child(3) {
+      width: 33.333%; }
+    .pages-for-solutions .time .indicators .number {
+      font-size: 30px;
+      margin-bottom: 4px; }
+    .pages-for-solutions .time .indicators .name {
+      font-size: 12px; }
+  .pages-for-solutions .tasks {
+    background-image: none;
+    margin-bottom: 70px; }
+    .pages-for-solutions .tasks .subtitle {
+      margin-bottom: 15px; }
+    .pages-for-solutions .tasks .content {
+      width: 100%; }
+    .pages-for-solutions .tasks .text {
+      font-size: 14px;
+      line-height: 165%; }
+      .pages-for-solutions .tasks .text:not(:last-of-type) {
+        margin-bottom: 24px; }
+      .pages-for-solutions .tasks .text:last-of-type {
+        margin-bottom: 27px; }
+    .pages-for-solutions .tasks .functions {
+      font-size: 18px;
+      margin-bottom: 25px; }
+    .pages-for-solutions .tasks .explanation {
+      padding: 18px 15px 23px 25px; }
+      .pages-for-solutions .tasks .explanation .icon {
+        margin-right: 30px; }
+      .pages-for-solutions .tasks .explanation .text {
+        margin: 0;
+        font-size: 14px; }
+  .pages-for-solutions .customers {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 23px;
+    background-color: transparent;
+    border: none; }
+    .pages-for-solutions .customers .container {
+      width: 33.3333%;
+      min-height: 155px;
+      padding: 33px 30px 10px 43px;
+      border: 1px solid rgba(0, 0, 0, 0.1); }
+      .pages-for-solutions .customers .container:nth-child(1) .icon {
+        width: 39px;
+        height: 40px; }
+      .pages-for-solutions .customers .container:nth-child(2) {
+        border-right-color: transparent;
+        border-left-color: transparent; }
+        .pages-for-solutions .customers .container:nth-child(2) .icon {
+          width: 42px;
+          height: 40px; }
+      .pages-for-solutions .customers .container:nth-child(3) .icon {
+        width: 37px;
+        height: 40px; }
+      .pages-for-solutions .customers .container:nth-child(4) {
+        border-top-color: transparent; }
+        .pages-for-solutions .customers .container:nth-child(4) .icon {
+          width: 35px;
+          height: 40px; }
+      .pages-for-solutions .customers .container:nth-child(5) {
+        border-top-color: transparent;
+        border-left-color: transparent; }
+        .pages-for-solutions .customers .container:nth-child(5) .icon {
+          width: 38px;
+          height: 40px; }
+      .pages-for-solutions .customers .container .text {
+        font-size: 12px;
+        margin: 0; }
+  .pages-for-solutions .technology .text {
+    font-size: 14px;
+    line-height: 185.69%;
+    margin-bottom: 17px; }
+  .pages-for-solutions .technology .item {
+    min-height: 197px;
+    padding: 22px 15px 20px 29px; }
+    .pages-for-solutions .technology .item .number {
+      font-size: 40px;
+      margin-bottom: 5px; }
+    .pages-for-solutions .technology .item .name {
+      font-size: 14px; }
+    .pages-for-solutions .technology .item .text {
+      font-size: 12px;
+      line-height: 163%; }
+  .pages-for-solutions .scenarios {
+    min-height: 409px;
+    margin-top: -120px;
+    padding-top: 175px;
+    margin-bottom: 60px; }
+    .pages-for-solutions .scenarios .subtitle {
+      margin-bottom: 18px; }
+    .pages-for-solutions .scenarios .text {
+      font-size: 12px; }
+      .pages-for-solutions .scenarios .text .color_blue {
+        font-size: 14px; }
+    .pages-for-solutions .scenarios .list {
+      margin-bottom: 69px; }
+    .pages-for-solutions .scenarios .item {
+      margin-bottom: 19px; }
+  .pages-for-solutions .experience {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 40px; }
+    .pages-for-solutions .experience .subtitle {
+      font-size: 20px;
+      margin-bottom: 26px; }
+    .pages-for-solutions .experience .container .subtitle {
+      font-size: 18px;
+      line-height: 135.6%; }
+    .pages-for-solutions .experience .description {
+      font-size: 14px;
+      line-height: 197.69%;
+      margin-bottom: 14px; }
+    .pages-for-solutions .experience .text {
+      font-size: 12px; }
+    .pages-for-solutions .experience .list {
+      margin-bottom: 25px; }
+    .pages-for-solutions .experience .separator_line {
+      height: 77px;
+      margin-top: 10px; }
+    .pages-for-solutions .experience .item:first-child {
+      width: 23%; }
+    .pages-for-solutions .experience .item:nth-child(3) {
+      width: 29%; }
+    .pages-for-solutions .experience .item .text {
+      font-size: 12px; }
+    .pages-for-solutions .experience__counter {
+      display: none; }
+    .pages-for-solutions .experience__slider {
+      display: block;
+      position: relative;
+      width: 100%;
+      min-width: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
+      .pages-for-solutions .experience__slider .flex-viewport {
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        overflow: visible !important;
+        padding-right: calc(100% - 645px);
+        margin-left: -15px; }
+      .pages-for-solutions .experience__slider_item {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        min-height: 320px;
+        width: 660px !important;
+        margin: 0 15px;
+        padding: 0; }
+        .pages-for-solutions .experience__slider_item .primarily {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          margin-bottom: 20px; }
+        .pages-for-solutions .experience__slider_item .somersault {
+          margin-bottom: 50px; }
+        .pages-for-solutions .experience__slider_item .image_wrapper {
+          width: 100%;
+          height: 420px;
+          margin-right: 0;
+          margin-bottom: 16px; }
+        .pages-for-solutions .experience__slider_item .button_bg_blue {
+          width: 100%;
+          margin: 0; }
+      .pages-for-solutions .experience__slider .flex-control-nav {
+        bottom: 15px; }
+  .pages-for-solutions .effects {
+    display: none; }
+  .pages-for-solutions .contacts {
+    margin-bottom: 55px; }
+    .pages-for-solutions .contacts .form {
+      padding: 24px 29px 37px; }
+      .pages-for-solutions .contacts .form__title {
+        font-size: 20px;
+        line-height: 149.6%; }
+      .pages-for-solutions .contacts .form .row {
+        width: 100%;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+      .pages-for-solutions .contacts .form .input, .pages-for-solutions .contacts .form .submit {
+        height: 50px;
+        margin-bottom: 23px; }
+      .pages-for-solutions .contacts .form .input {
+        width: 48%;
+        font-size: 14px; }
+        .pages-for-solutions .contacts .form .input:nth-child(2) {
+          margin-right: 0; }
+      .pages-for-solutions .contacts .form .submit {
+        width: 100%; }
+  .pages-for-solutions .neighbors {
+    margin-bottom: 60px; }
+    .pages-for-solutions .neighbors .text {
+      font-size: 12px; }
+    .pages-for-solutions .neighbors .item {
+      min-height: 84px;
+      font-size: 14px; }
+      .pages-for-solutions .neighbors .item .icon {
+        width: 13px;
+        height: 23px; }
+    .pages-for-solutions .neighbors .prev {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      padding-left: 15px; }
+    .pages-for-solutions .neighbors .next {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      padding-right: 15px; } }
+
+@media (max-width: 750px) {
+  .pages-for-solutions .top-block {
+    background-size: auto;
+    background-position: 15% 5%;
+    margin-bottom: 25px; }
+    .pages-for-solutions .top-block .wrapper {
+      padding-top: 20px; }
+  .pages-for-solutions .breadcrumbs {
+    margin-bottom: 29px; }
+  .pages-for-solutions .title {
+    letter-spacing: 1px;
+    margin-bottom: 16px; }
+  .pages-for-solutions .main_image {
+    height: auto;
+    margin-bottom: 13px; }
+  .pages-for-solutions .text-under-image {
+    font-size: 14px;
+    line-height: 158.19%;
+    margin-bottom: 43px; }
+  .pages-for-solutions .subtitle {
+    font-size: 16px;
+    line-height: 158.6%; }
+  .pages-for-solutions .value .item {
+    width: 100%; }
+  .pages-for-solutions .time {
+    padding: 29px 20px 42px 25px; }
+    .pages-for-solutions .time .subtitle {
+      font-size: 14px;
+      line-height: 156%;
+      margin-bottom: 22px; }
+    .pages-for-solutions .time .indicators:nth-child(1) {
+      width: 100%;
+      margin-bottom: 13px; }
+    .pages-for-solutions .time .indicators:nth-child(2) {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 15px; }
+    .pages-for-solutions .time .indicators:nth-child(3) {
+      width: 100%; }
+    .pages-for-solutions .time .indicators .number {
+      font-size: 30px;
+      margin-bottom: 4px; }
+    .pages-for-solutions .time .indicators .name {
+      font-size: 12px; }
+  .pages-for-solutions .answers {
+    margin-bottom: 50px; }
+  .pages-for-solutions .tasks {
+    margin-bottom: 50px; }
+    .pages-for-solutions .tasks .subtitle {
+      margin-bottom: 9px; }
+    .pages-for-solutions .tasks .functions {
+      display: none; }
+    .pages-for-solutions .tasks .text {
+      font-size: 12px;
+      line-height: 165%; }
+      .pages-for-solutions .tasks .text:not(:last-of-type) {
+        margin-bottom: 35px; }
+      .pages-for-solutions .tasks .text:last-of-type {
+        margin-bottom: 37px; }
+    .pages-for-solutions .tasks .explanation {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      padding: 23px 15px 21px 21px; }
+      .pages-for-solutions .tasks .explanation .icon {
+        width: 26px;
+        height: 26px;
+        margin-right: 13px; }
+      .pages-for-solutions .tasks .explanation .text {
+        font-size: 12px;
+        line-height: 167.69%;
+        margin: 0; }
+  .pages-for-solutions .customers {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 23px;
+    background-color: transparent;
+    border: none; }
+    .pages-for-solutions .customers .container {
+      width: 100%;
+      min-height: 155px;
+      padding: 33px 30px 10px 43px;
+      border: 1px solid rgba(0, 0, 0, 0.1); }
+      .pages-for-solutions .customers .container:nth-child(1) .icon {
+        width: 39px;
+        height: 40px; }
+      .pages-for-solutions .customers .container:nth-child(2) {
+        border-top-color: transparent;
+        border-right-color: rgba(0, 0, 0, 0.1);
+        border-left-color: rgba(0, 0, 0, 0.1); }
+        .pages-for-solutions .customers .container:nth-child(2) .icon {
+          width: 42px;
+          height: 40px; }
+      .pages-for-solutions .customers .container:nth-child(3) {
+        border-top-color: transparent; }
+        .pages-for-solutions .customers .container:nth-child(3) .icon {
+          width: 37px;
+          height: 40px; }
+      .pages-for-solutions .customers .container:nth-child(4) {
+        border-top-color: transparent; }
+        .pages-for-solutions .customers .container:nth-child(4) .icon {
+          width: 35px;
+          height: 40px; }
+      .pages-for-solutions .customers .container:nth-child(5) {
+        border-top-color: transparent;
+        border-left-color: rgba(0, 0, 0, 0.1); }
+        .pages-for-solutions .customers .container:nth-child(5) .icon {
+          width: 38px;
+          height: 40px; }
+      .pages-for-solutions .customers .container .text {
+        font-size: 12px;
+        margin: 0; }
+  .pages-for-solutions .technology .text {
+    font-size: 14px;
+    line-height: 185.69%;
+    margin-bottom: 34px; }
+  .pages-for-solutions .technology .list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .pages-for-solutions .technology .item {
+    min-height: 175px;
+    width: 100%;
+    padding: 31px 20px 20px 22px; }
+    .pages-for-solutions .technology .item:nth-child(2) {
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    .pages-for-solutions .technology .item .number {
+      font-size: 30px;
+      line-height: 136.6%;
+      margin-bottom: 7px; }
+    .pages-for-solutions .technology .item .name {
+      font-size: 12px; }
+    .pages-for-solutions .technology .item .text {
+      font-size: 12px;
+      line-height: 163%; }
+  .pages-for-solutions .scenarios {
+    margin-top: -291px;
+    margin-bottom: 51px;
+    min-height: 810px;
+    padding-top: 338px; }
+    .pages-for-solutions .scenarios .subtitle {
+      margin-bottom: 16px; }
+    .pages-for-solutions .scenarios .list {
+      width: 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .pages-for-solutions .scenarios .item {
+      width: 100%; }
+      .pages-for-solutions .scenarios .item:not(:last-child) {
+        margin-bottom: 17px; }
+      .pages-for-solutions .scenarios .item:before {
+        bottom: -2px;
+        margin-left: -14px;
+        font-size: 16px; }
+    .pages-for-solutions .scenarios .text {
+      font-size: 12px; }
+      .pages-for-solutions .scenarios .text:before {
+        top: 2px;
+        left: -27px; }
+  .pages-for-solutions .experience .subtitle {
+    font-size: 16px;
+    margin-bottom: 26px; }
+  .pages-for-solutions .experience .container .subtitle {
+    font-size: 14px;
+    line-height: 142.6%;
+    margin-bottom: 14px; }
+  .pages-for-solutions .experience .description {
+    font-size: 12px;
+    line-height: 151.19%;
+    margin-bottom: 20px; }
+  .pages-for-solutions .experience .list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 15px; }
+  .pages-for-solutions .experience .separator_line {
+    display: none; }
+  .pages-for-solutions .experience .item:first-child {
+    width: 50%; }
+  .pages-for-solutions .experience .item:nth-child(3) {
+    width: 50%; }
+  .pages-for-solutions .experience .item:nth-child(5) {
+    width: 50%; }
+  .pages-for-solutions .experience .item .number {
+    font-size: 30px;
+    line-height: 136.6%; }
+  .pages-for-solutions .experience .item .text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 136.69%; }
+  .pages-for-solutions .experience__slider .flex-viewport {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    overflow: visible !important;
+    padding-right: calc(100% - 271px);
+    margin-left: -5px; }
+  .pages-for-solutions .experience__slider_item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 276px !important;
+    font-size: 12px;
+    line-height: 176%;
+    margin: 0 5px 0; }
+    .pages-for-solutions .experience__slider_item .button_bg_blue {
+      padding: 0 12px 0; }
+  .pages-for-solutions .experience__slider .image_wrapper {
+    height: 185px;
+    margin-bottom: 13px; }
+  .pages-for-solutions .contacts {
+    margin-bottom: 38px; }
+    .pages-for-solutions .contacts .form {
+      padding: 29px 19px 37px; }
+      .pages-for-solutions .contacts .form__title {
+        font-size: 16px;
+        line-height: 149.6%; }
+      .pages-for-solutions .contacts .form .row {
+        width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; }
+      .pages-for-solutions .contacts .form .input, .pages-for-solutions .contacts .form .submit {
+        height: 38px;
+        margin-bottom: 14px; }
+      .pages-for-solutions .contacts .form .input {
+        font-size: 12px;
+        width: 100%; }
+        .pages-for-solutions .contacts .form .input:nth-child(2) {
+          margin-right: 0; }
+      .pages-for-solutions .contacts .form .submit {
+        width: 100%;
+        margin-bottom: 21px; }
+  .pages-for-solutions .neighbors {
+    margin-bottom: 50px; }
+    .pages-for-solutions .neighbors .text {
+      font-size: 12px; }
+    .pages-for-solutions .neighbors .list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .pages-for-solutions .neighbors .item {
+      width: 100%;
+      min-height: 65px;
+      font-size: 14px; }
+      .pages-for-solutions .neighbors .item .icon {
+        width: 13px;
+        height: 23px; }
+      .pages-for-solutions .neighbors .item:nth-child(2) {
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
+        border-bottom-color: transparent; }
+      .pages-for-solutions .neighbors .item:first-child {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+        border: 1px solid rgba(0, 0, 0, 0.1); }
+        .pages-for-solutions .neighbors .item:first-child .icon {
+          margin-right: 20px; }
+      .pages-for-solutions .neighbors .item:last-child {
+        -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+                order: 3;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-top-color: transparent; }
+        .pages-for-solutions .neighbors .item:last-child .icon {
+          margin-left: 20px; }
+    .pages-for-solutions .neighbors .prev {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      padding-left: 15px; }
+    .pages-for-solutions .neighbors .next {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      padding-right: 15px; } }
 
 /*# sourceMappingURL=style.css.map */

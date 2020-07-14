@@ -624,6 +624,10 @@
     location.reload();
   });
 
+  $(window).resize(function(){
+    location.reload();
+  });
+
   hangFlexslider();
   getShadowMenu();
   slowScroll();
