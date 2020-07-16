@@ -418,8 +418,18 @@
 
   var getShadowMenu = function () {
     if($(window).width() > 1150) {
+
+      $(document).ready(function() {
+        if($(this).scrollTop() <= 80) {
+            $('.header').addClass('header__shadow');
+        }
+        else{
+            $('.header').removeClass('header__shadow');
+        }
+      });
+
       $(window).scroll(function() {
-        if($(this).scrollTop() >= 70) {
+        if($(this).scrollTop() <= 80) {
             $('.header').addClass('header__shadow');
         }
         else{
@@ -630,13 +640,101 @@
     });
   };
 
-  $(window).on("orientationchange",function(event){
-    location.reload();
-  });
 
-  $(window).resize(function(){
-    location.reload();
-  });
+  var getValidForm = function () {
+    $(document).ready(function() {
+
+      $('button[type="submit"]').click(function(){
+        $('#contacts_form').validate({
+
+          rules: {
+            name: {
+              required: true,
+            },
+            email: {
+              required: true,
+              email: true,
+            },
+           phone: {
+              required: true,
+              number: true
+            },
+            agree: {
+              required : true,
+            }
+          },
+
+          showErrors: function(errorMap, errorList) {
+            $('.form_input_name').attr("placeholder", "Имя").removeClass('error');
+            $('.form_input_tel').attr("placeholder", "Телефон").removeClass('error');
+            $('.form_input_email').attr("placeholder", "E-mail").removeClass('error');
+            $('.form_input_check_policy').removeClass('error');
+
+            $.each(errorList, function(index, el) {
+
+              if (el.element.name === 'name') {
+                $(el.element).attr("placeholder", "Введите ваше имя").addClass('error');
+              }
+
+              if (el.element.name === 'phone') {
+                $(el.element).attr("placeholder", "Введите ваш телефон").addClass('error');
+              }
+
+              if (el.element.name === 'email') {
+                $(el.element).attr("placeholder", "Введите ваш e-mail").addClass('error');
+              }
+
+              if (el.element.name === 'agree') {
+                $(el.element).addClass('error');
+              }
+            });
+
+          },
+
+          onfocusout: function(elem) {
+            $('.form_input_name').attr("placeholder", "Имя").removeClass('error');
+            $('.form_input_tel').attr("placeholder", "Телефон").removeClass('error');
+            $('.form_input_email').attr("placeholder", "E-mail").removeClass('error');
+            $('.form_input_check_policy').removeClass('error');
+          },
+
+          submitHandler: function(){
+               sendAjaxForm('contacts_form', 'ajax-form.php'); //Вызываем функцию отправки формы
+           return false;
+          }
+        });
+      });
+
+      function sendAjaxForm(contacts_form, url) {
+        $.ajax({
+          url:     url, //url страницы (ajax-form.php)
+          type:     "POST", //метод отправки
+          dataType: "html", //формат данных
+          data: $("#"+contacts_form).serialize(),  // Сеарилизуем объекты формы
+          success: function(response) { //Данные отправлены успешно
+
+            //Ваш код если успешно отправлено
+            alert('Ваш запрос отправлен. Мы скоро с вами свяжемся!');
+          },
+          error: function(response) { // Данные не отправлены
+
+            //Ваш код если ошибка
+            alert('Ошибка отправления.');
+          }
+        });
+      }
+    });
+  };
+
+  var getReload = function () {
+    $(window).on("orientationchange",function(event){
+      location.reload();
+    });
+
+    $(window).resize(function(){
+      location.reload();
+    });
+  };
 
   hangFlexslider();
   getShadowMenu();
@@ -644,5 +742,7 @@
   getShowServices();
   showMenu();
   getMarquee();
+  getValidForm();
+  getReload();
 
 }());

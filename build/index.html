@@ -627,15 +627,15 @@
           <a href="tel:+79169043038" class="link">+7 916 904 30 38</a>
           <a href="mailto:belousov@dtfactory.tech" class="link">belousov@dtfactory.tech</a>
         </div>
-        <form action="" class="form   revealator-fade revealator-once revealator-duration20">
+        <form action="" id="contacts_form" class="form   revealator-fade revealator-once revealator-duration20">
           <h3 class="form__title">Связаться с нами</h3>
-          <input type="text" class="input" placeholder="Имя" required>
-          <input type="tel" class="input" placeholder="Телефон" required>
-          <input type="email" class="input" placeholder="E-mail" required>
-          <button class="submit button_stroke_white">Отправить</button>
+          <input type="text" name="name" class="input form_input_name" placeholder="Имя" required>
+          <input type="tel" name="phone" class="input form_input_tel" placeholder="Телефон" required>
+          <input type="email" name="email" class="input form_input_email" placeholder="E-mail" required>
+          <button type="submit" class="submit button_stroke_white ">Отправить</button>
           <div class="consent">
-            <input id="consent_input" type="checkbox" class="checkbox">
-            <label for="consent_input" class="checkbox__label">
+            <input id="agree" name="agree" type="checkbox" class="checkbox form_input_check_policy" value="agree" required>
+            <label for="agree" class="checkbox__label">
               <p class="text">Я согласен с <a href="" class="link">политикой конфкендициальности</a> и разрешаю обработку моих персональных данных</p>
             </label>
           </div>
@@ -736,6 +736,7 @@
   <section class="overlay">
   </section>
   <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
   <script src="js/svgxuse.min.js"></script>
   <script src="js/jquery.flexslider.min.js"></script>
   <script src="js/jquery.scrollTo.min.js"></script>
