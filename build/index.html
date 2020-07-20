@@ -49,7 +49,7 @@
             <a href="#contacts" id="go_to_contacts" class="link">Контакты</a>
           </li>
           <li class="item inpopup">
-            <button class="button">Связаться с нами</button>
+            <a href="#form" class="button" id="go_to_form_header_tablet">Связаться с нами</a>
           </li>
         </ul>
         <div class="basement inpopup">
@@ -60,7 +60,7 @@
       </nav>
       <div class="communication">
         <a href="tel:+79169043088" class="tel">+7 916 904 30 88</a>
-        <button class="button">Связаться с нами</button>
+        <a href="#form" class="button" id="go_to_form_header_desk">Связаться с нами</a>
       </div>
       <button class="open_menu">Меню</button>
     </div>
@@ -102,7 +102,10 @@
     </section>
     <section class="services">
       <div class="wrapper">
-        <h2 class="title revealator-slideright revealator-once" id="services">Какие услуги мы оказываем</h2>
+        <h2 class="title revealator-slideright revealator-once">
+          Какие услуги мы оказываем
+          <span class="placemark_for_linking" id="services"></span>
+        </h2>
         <div class="content services__slider">
           <nav class="navigation">
             <ul class="list">
@@ -223,7 +226,10 @@
     </section>
     <section class="technologies">
       <div class="wrapper">
-        <h2 class="title revealator-slideright revealator-once" id="technologies">Технологии Индустрии 4.0 <br>для создания продуктов</h2>
+        <h2 class="title revealator-slideright revealator-once">
+          Технологии Индустрии 4.0 <br>для создания продуктов
+          <span class="placemark_for_linking" id="technologies"></span>
+        </h2>
         <ul class="list revealator-slideup revealator-once revealator-duration20">
           <li class="item">
             <div class="container">
@@ -310,7 +316,10 @@
     </section>
     <section class="values">
       <div class="wrapper">
-        <h2 class="title values__title  revealator-slideright revealator-once" id="values">Наши ценности</h2>
+        <h2 class="title values__title  revealator-slideright revealator-once">
+          Наши ценности
+          <span class="placemark_for_linking" id="values"></span>
+        </h2>
         <ul class="list revealator-slideup revealator-once revealator-duration20">
           <li class="item">
             <p class="number">01</p>
@@ -338,7 +347,8 @@
             <p class="text">Поэтому наш успех внедренный и работающий цифровой продукт Клиента</p>
           </li>
         </ul>
-        <h2 class="title decisions__title  revealator-slideright revealator-once" id="decisions">Решения
+        <h2 class="title decisions__title  revealator-slideright revealator-once">Решения
+          <span class="placemark_for_linking" id="decisions"></span>
         </h2>
         <div class="decisions__slider revealator-slideup revealator-once revealator-duration20">
           <ul class="decisions__slider_container">
@@ -385,7 +395,9 @@
     </section>
     <section class="timeline">
       <div class="wrapper">
-        <h2 class="title revealator-slideright revealator-once" id="timeline">Сроки разработки</h2>
+        <h2 class="title revealator-slideright revealator-once">Сроки разработки
+          <span class="placemark_for_linking" id="timeline"></span>
+        </h2>
         <p class="text revealator-fade revealator-once">Мы умеем работать с высокой скоростью: прототип цифрового продукта <b>от 1.5 месяцев</b>. Внедрение продукта <b>от 5 месяцев</b>.</p>
         <div class="timeline__slider revealator-slideup revealator-once revealator-duration20">
           <ul class="timeline__slider_container">
@@ -466,7 +478,9 @@
     </section>
     <section class="experience">
       <div class="wrapper">
-        <h2 class="title revealator-slideright revealator-once" id="experience">Опыт в нефтегазе</h2>
+        <h2 class="title revealator-slideright revealator-once">Опыт в нефтегазе
+          <span class="placemark_for_linking" id="experience"></span>
+        </h2>
         <div class="experience__slider revealator-slideup revealator-once revealator-duration20">
           <ul class="experience__slider_container">
             <li class="experience__slider_item">
@@ -485,10 +499,10 @@
                 </picture>
                 <div class="container">
                   <div class="row">
-                    <h3 class="subtitle"><span class="color_blue">Цифровое месторождение</span> АНК «Башнефть»</h3>
+                    <h3 class="subtitle"><span class="color_blue">Цифровое месторождение</span> АНК&nbsp;«Башнефть»</h3>
                     <div class="links">
-                      <a href="" class="button button_stroke_blue">Цифровой двойник</a>
-                      <a href="" class="button button_stroke_blue">Нейронные сети</a>
+                      <button class="button">Цифровой двойник</button>
+                      <button class="button">Нейронные сети</button>
                     </div>
                     <ul class="list">
                       <li class="item">Система разработана и введена в продуктив за 12 месяцев, экономический эффект 1 млрд. руб в год</li>
@@ -515,22 +529,19 @@
                       <span class="experience__counter_index"></span>/<span class="experience__counter_total"></span>
                     </p>
                   </div>
-                  <source
-                    media="(max-width: 1150px) and (min-width: 750px)"
-                    srcset="img/experience/experience_1_tablet.png">
-
-                  <img src="img/experience/experience_1.png" alt="Цифровое месторождение АНК «Башнефть»" class="image">
+                  <img src="img/experience/experience_2.png" alt="Цифровизация ПАО «НК «РОСНЕФТЬ»" class="image">
                 </picture>
                 <div class="container">
                   <div class="row">
-                    <h3 class="subtitle"><span class="color_blue">Нейронные сети</span> АНК «Башнефть»</h3>
+                    <h3 class="subtitle"><span class="color_blue">Цифровизация</span> ПАО&nbsp;НК&nbsp;«РОСНЕФТЬ»</h3>
                     <div class="links">
-                      <a href="" class="button button_stroke_blue">Цифровой двойник</a>
-                      <a href="" class="button button_stroke_blue">Нейронные сети</a>
+                      <button class="button">Цифровой двойник</button>
+                      <button class="button">Нейронные сети</button>
                     </div>
                     <ul class="list">
-                      <li class="item">Создан «Центр интегрированных операций» для трансформации процесса управления добычей с внедрением цифровых решений по интегрированному моделированию и планированию, машинному обучению и др. (всего 12 цифровых решений )</li>
-                      <li class="item">Роли: директор программы проектов</li>
+                      <li class="item">С нуля создана цифровая лаборатория для разработки решений компании Роснефть – более 100 сотрудников</li>
+                      <li class="item">за 1.5 года разработаны и успешно апробированы 16 цифровых решений в направлениях: компьютерное зрение, оптимизация логистики, прогноз отказов</li>
+                      <li class="item">Роли: CDTO, руководитель подразделения цифровизации</li>
                     </ul>
                   </div>
                   <div class="bottom">
@@ -552,22 +563,121 @@
                       <span class="experience__counter_index"></span>/<span class="experience__counter_total"></span>
                     </p>
                   </div>
-                  <source
-                    media="(max-width: 1150px) and (min-width: 750px)"
-                    srcset="img/experience/experience_1_tablet.png">
-
-                  <img src="img/experience/experience_1.png" alt="Цифровое месторождение АНК «Башнефть»" class="image">
+                  <img src="img/experience/experience_3.png" alt="Интеллектуальное месторождение «ЛУКОЙЛ-Пермь»" class="image">
                 </picture>
                 <div class="container">
                   <div class="row">
-                    <h3 class="subtitle"><span class="color_blue">3D визуализация</span> АНК «Башнефть»</h3>
+                    <h3 class="subtitle"><span class="color_blue">Интеллектуальное месторождение</span> «ЛУКОЙЛ&#8209;Пермь»</h3>
                     <div class="links">
-                      <a href="" class="button button_stroke_blue">Цифровой двойник</a>
-                      <a href="" class="button button_stroke_blue">Нейронные сети</a>
+                      <button class="button">Цифровой двойник</button>
+                      <button class="button">Нейронные сети</button>
                     </div>
                     <ul class="list">
-                      <li class="item">Система разработана и введена в продуктив за 12 месяцев, экономический эффект 1 млрд. руб в год</li>
-                      <li class="item">Создан «Центр интегрированных операций» для трансформации процесса управления добычей с внедрением цифровых решений по интегрированному моделированию и планированию, машинному обучению и др. (всего 12 цифровых решений )</li>
+                      <li class="item">Создан «Центр интегрированных операций» для трансформации процесса управления добычей</li>
+                      <li class="item">Кратно сократилось время на принятие решений, в результате снижение простоя скважин и экономический эффект – 100 млн. руб в год на одной группе месторождений</li>
+                      <li class="item">Внедрены цифровые инструменты: интегрированное моделирование и планирование, модель ограничений</li>
+                    </ul>
+                  </div>
+                  <div class="bottom">
+                    <a href="" class="button button_bg_blue">Подробнее</a>
+                    <a href="" class="button button_stroke_blue">Получить портфолио команды</a>
+                  </div>
+                </div>
+              </div>
+              <div class="somersault">
+                <a href="" class="button button_bg_blue">Подробнее</a>
+                <a href="" class="button button_stroke_blue">Получить портфолио команды</a>
+              </div>
+            </li>
+            <li class="experience__slider_item">
+              <div class="primarily">
+                <picture class="image_wrapper">
+                  <div class="experience__counter">
+                    <p class="experience__counter_numbers">
+                      <span class="experience__counter_index"></span>/<span class="experience__counter_total"></span>
+                    </p>
+                  </div>
+                  <img src="img/experience/experience_4.png" alt="Производственный портал «Система мониторинга добычи» ПАО «Газпром нефть»" class="image">
+                </picture>
+                <div class="container">
+                  <div class="row">
+                    <h3 class="subtitle"><span class="color_blue">Производственный портал</span> «Система мониторинга добычи» ПАО&nbsp;«Газпром&nbsp;нефть»</h3>
+                    <div class="links">
+                      <button class="button">Цифровой двойник</button>
+                      <button class="button">Нейронные сети</button>
+                    </div>
+                    <ul class="list">
+                      <li class="item">Интерактивная аналитика для мониторинг добычи нефти, выполнения плана и графика добычи по подразделениям</li>
+                      <li class="item">Мониторинг отклонений добычи, дебита, обводненности по объектам и скважинам</li>
+                      <li class="item">Анализ отклонения добычи от суточного графика и бизнес-плана</li>
+                      <li class="item">Анализ конкурентов, работы фонда скважин и промысловых трубопроводов</li>
+                    </ul>
+                  </div>
+                  <div class="bottom">
+                    <a href="" class="button button_bg_blue">Подробнее</a>
+                    <a href="" class="button button_stroke_blue">Получить портфолио команды</a>
+                  </div>
+                </div>
+              </div>
+              <div class="somersault">
+                <a href="" class="button button_bg_blue">Подробнее</a>
+                <a href="" class="button button_stroke_blue">Получить портфолио команды</a>
+              </div>
+            </li>
+            <li class="experience__slider_item">
+              <div class="primarily">
+                <picture class="image_wrapper">
+                  <div class="experience__counter">
+                    <p class="experience__counter_numbers">
+                      <span class="experience__counter_index"></span>/<span class="experience__counter_total"></span>
+                    </p>
+                  </div>
+                  <img src="img/experience/experience_5.png" alt="Система поддержки разработки и эксплуатации месторождений ОАО «ЛУКОЙЛ»" class="image">
+                </picture>
+                <div class="container">
+                  <div class="row">
+                    <h3 class="subtitle"><span class="color_blue">Система поддержки разработки</span> и эксплуатации месторождений ОАО&nbsp;«ЛУКОЙЛ»</h3>
+                    <div class="links">
+                      <button class="button">Цифровой двойник</button>
+                      <button class="button">Нейронные сети</button>
+                    </div>
+                    <ul class="list">
+                      <li class="item">Информационная поддержка контроля и анализа разработки и эксплуатации месторождений нефти и газа, повышение эффективности информационного обеспечения управленческих решений всех уровней.</li>
+                      <li class="item">Система обеспечивает сбор, хранение, визуализацию и анализ комплекса производственных данных НГДО и геолого-геофизических данных НИПИ, формирование аналитических представлений на основе проектной базы данных</li>
+                    </ul>
+                  </div>
+                  <div class="bottom">
+                    <a href="" class="button button_bg_blue">Подробнее</a>
+                    <a href="" class="button button_stroke_blue">Получить портфолио команды</a>
+                  </div>
+                </div>
+              </div>
+              <div class="somersault">
+                <a href="" class="button button_bg_blue">Подробнее</a>
+                <a href="" class="button button_stroke_blue">Получить портфолио команды</a>
+              </div>
+            </li>
+            <li class="experience__slider_item">
+              <div class="primarily">
+                <picture class="image_wrapper">
+                  <div class="experience__counter">
+                    <p class="experience__counter_numbers">
+                      <span class="experience__counter_index"></span>/<span class="experience__counter_total"></span>
+                    </p>
+                  </div>
+                  <img src="img/experience/experience_6.png" alt="Факторный анализ работы скважин ПАО «Газпром нефть»" class="image">
+                </picture>
+                <div class="container">
+                  <div class="row">
+                    <h3 class="subtitle"><span class="color_blue">Факторный анализ работы</span> скважин ПАО&nbsp;«Газпром&nbsp;нефть»</h3>
+                    <div class="links">
+                      <button class="button">Цифровой двойник</button>
+                      <button class="button">Нейронные сети</button>
+                    </div>
+                    <ul class="list">
+                      <li class="item">Выявление причин изменения дебита нефти и обводненности скважин за рассматриваемый период</li>
+                      <li class="item">Интерактивная визуализация текущей информации и изменений в добыче, закачке, фонда по подразделениям Компании, пластам, скважинам</li>
+                      <li class="item">Рекомендации по работе с действующим фондом для сокращения потерь</li>
                     </ul>
                   </div>
                   <div class="bottom">
@@ -609,7 +719,10 @@
     <section class="contacts">
       <div class="wrapper">
         <div class="content revealator-slideright revealator-once revealator-duration20">
-          <h2 class="title" id="contacts">Контакты</h2>
+          <h2 class="title">
+            Контакты
+            <span class="placemark_for_linking" id="contacts"></span>
+          </h2>
           <div class="persona">
             <img src="img/oleg_belousov.png" alt="Олег Белоусов" class="image" width="84" height="84">
             <div class="about">
@@ -628,7 +741,10 @@
           <a href="mailto:belousov@dtfactory.tech" class="link">belousov@dtfactory.tech</a>
         </div>
         <form action="" id="contacts_form" class="form   revealator-fade revealator-once revealator-duration20">
-          <h3 class="form__title">Связаться с нами</h3>
+          <h3 class="form__title">
+            Связаться с нами
+            <span class="placemark_for_linking" id="form"></span>
+          </h3>
           <input type="text" name="name" class="input form_input_name" placeholder="Имя" required>
           <input type="tel" name="phone" class="input form_input_tel" placeholder="Телефон" required>
           <input type="email" name="email" class="input form_input_email" placeholder="E-mail" required>
@@ -687,7 +803,7 @@
             <a href="tel:+79169043088" class="tel">+7 916 904 30 88</a>
             <a href="mailto:belousov@dtfactory.tech" class="email">belousov@dtfactory.tech</a>
           </div>
-          <button class="button">Связаться с нами</button>
+          <button class="button" id="go_to_form_footer">Связаться с нами</button>
         </div>
       </div>
     </div>
@@ -697,14 +813,14 @@
           <h3 class="subtitle">Услуги</h3>
           <div class="row">
             <div class="column">
-              <a href="" class="link">Стратегия и дорожная карта цифровизации</a>
-              <a href="" class="link">Цифровая трансформация на аутсорсинге</a>
-              <a href="" class="link">Быстрая разработка цифровых решений</a>
+              <a href="road_map.html" class="link">Стратегия и дорожная карта цифровизации</a>
+              <a href="digital_transformation.html" class="link">Цифровая трансформация на аутсорсинге</a>
+              <a href="digital_products.html" class="link">Быстрая разработка цифровых решений</a>
             </div>
             <div class="column">
-              <a href="" class="link">Цифровой двойник</a>
-              <a href="" class="link">Обучение по цифровизации</a>
-              <a href="" class="link">Озеро данных</a>
+              <a href="digital_doubles.html" class="link">Цифровой двойник</a>
+              <a href="training.html" class="link">Обучение по цифровизации</a>
+              <a href="data_factory.html" class="link">Озеро данных</a>
             </div>
           </div>
         </div>
@@ -712,14 +828,12 @@
           <h3 class="subtitle">Решения</h3>
           <div class="row">
             <div class="column">
-              <a href="" class="link">Прогнозная аналитика отказов оборудования</a>
-              <a href="" class="link">Голосовой помощник</a>
-              <a href="" class="link">Интегрированное планирование</a>
+              <a href="predictive_analytics.html" class="link">Прогнозная аналитика отказов оборудования</a>
+              <a href="voice_assistant.html" class="link">Голосовой помощник</a>
+              <a href="integrated_planning.html" class="link">Интегрированное планирование</a>
             </div>
             <div class="column">
-              <a href="" class="link">Цифровизация нефтегазовой отрасли</a>
-              <a href="" class="link">Компьютерное зрение</a>
-              <a href="" class="link">Uber для ТОРО (техническое обслуживание <br>и ремонт оборудования)</a>
+              <a href="solutions_industry.html" class="link">Цифровизация нефтегазовой отрасли</a>
             </div>
           </div>
         </div>
