@@ -406,233 +406,106 @@
     }
   }
 
-  var getShadowMenu = function () {
-    if($(window).width() > 1150) {
-      $(window).scroll(function() {
-        if($(this).scrollTop() >= 70) {
-            $('.header').addClass('header__shadow');
-        }
-        else{
-            $('.header').removeClass('header__shadow');
-        }
-      });
-    };
+  var showMenu = function () {
+    $('.open_menu').click( function (evt) {
+      // evt.preventDefault();
+      $('.menu, .overlay').addClass('display_on');
+    });
+
+    $('.close, .overlay, .menu .item').click( function (evt) {
+      // evt.preventDefault();
+      $('.menu, .overlay').removeClass('display_on');
+    });
   };
 
-  var slowScroll = function () {
+  var getValidForm = function () {
     $(document).ready(function() {
-      if($(window).width() > 1150) {
-        $('#landing_scroll_down, #go_to_services').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#services'), {
-            axis: 'y',
-            duration: 900,
-            offset: -75,
-          });
-        });
 
-        $('#go_to_technologies').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#technologies'), {
-            axis: 'y',
-            duration: 900,
-            offset: -75,
-          });
-        });
+      $('button[type="submit"]').click(function(){
+        $('#contacts_form').validate({
 
-        $('#go_to_values').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#values'), {
-            axis: 'y',
-            duration: 900,
-            offset: -75,
-          });
-        });
+          rules: {
+            name: {
+              required: true,
+            },
+           phone: {
+              required: true,
+              number: true
+            },
+            agree: {
+              required : true,
+            }
+          },
 
-        $('#go_to_decisions').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#decisions'), {
-            axis: 'y',
-            duration: 900,
-            offset: -75,
-          });
-        });
+          showErrors: function(errorMap, errorList) {
+            $('.form_input_name').attr("placeholder", "Имя").removeClass('error');
+            $('.form_input_tel').attr("placeholder", "Телефон").removeClass('error');
+            $('.form_input_check_policy').removeClass('error');
 
-        $('#go_to_timeline').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#timeline'), {
-            axis: 'y',
-            duration: 900,
-            offset: -75,
-          });
-        });
+            $.each(errorList, function(index, el) {
 
-        $('#go_to_experience').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#experience'), {
-            axis: 'y',
-            duration: 900,
-            offset: -75,
-          });
-        });
+              if (el.element.name === 'name') {
+                $(el.element).attr("placeholder", "Введите ваше имя").addClass('error');
+              }
 
-        $('#go_to_contacts').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#contacts'), {
-            axis: 'y',
-            duration: 900,
-            offset: -75,
-          });
-        });
-      };
+              if (el.element.name === 'phone') {
+                $(el.element).attr("placeholder", "Введите ваш телефон").addClass('error');
+              }
 
-      if($(window).width() < 1151) {
-        $('#landing_scroll_down, #go_to_services').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#services'), {
-            axis: 'y',
-            duration: 900,
-            offset: 0,
-          });
-        });
+              if (el.element.name === 'agree') {
+                $(el.element).addClass('error');
+              }
+            });
 
-        $('#go_to_technologies').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#technologies'), {
-            axis: 'y',
-            duration: 900,
-            offset: 0,
-          });
-        });
+          },
 
-        $('#go_to_values').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#values'), {
-            axis: 'y',
-            duration: 900,
-            offset: 0,
-          });
-        });
+          onfocusout: function(elem) {
+            $('.form_input_name').attr("placeholder", "Имя").removeClass('error');
+            $('.form_input_tel').attr("placeholder", "Телефон").removeClass('error');
+            $('.form_input_check_policy').removeClass('error');
+          },
 
-        $('#go_to_decisions').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#decisions'), {
-            axis: 'y',
-            duration: 900,
-            offset: 0,
-          });
+          submitHandler: function(){
+               sendAjaxForm('contacts_form', 'ajax-form.php');
+           return false;
+          }
         });
+      });
 
-        $('#go_to_timeline').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#timeline'), {
-            axis: 'y',
-            duration: 900,
-            offset: 0,
-          });
-        });
+      function sendAjaxForm(contacts_form, url) {
+        $.ajax({
+          url:     url, //url страницы (ajax-form.php)
+          type:     "POST", //метод отправки
+          dataType: "html", //формат данных
+          data: $("#"+contacts_form).serialize(),  // Сеарилизуем объекты формы
+          success: function(response) { //Данные отправлены успешно
 
-        $('#go_to_experience').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#experience'), {
-            axis: 'y',
-            duration: 900,
-            offset: 0,
-          });
-        });
+            //Ваш код если успешно отправлено
+            alert('Ваш запрос отправлен. Мы скоро с вами свяжемся!');
+          },
+          error: function(response) { // Данные не отправлены
 
-        $('#go_to_contacts').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#contacts'), {
-            axis: 'y',
-            duration: 900,
-            offset: 0,
-          });
+            //Ваш код если ошибка
+            alert('Ошибка отправления.');
+          }
         });
       }
     });
   };
 
-  var getShowServices = function () {
-
-    var check = function (itemCheck, itemShow, itemLink) {
-        $(itemCheck).prop('checked') ? $(itemShow).removeClass('display_off') && $(itemLink).addClass('active') : $(itemShow).addClass('display_off') && $(itemLink).removeClass('active');
-    };
-
-    if($(window).width() > 1150 ) {
-      $(".services .radio__input").change( function() {
-          check('#services_1', '.block_1', '.item_1');
-          check('#services_2', '.block_2', '.item_2');
-          check('#services_3', '.block_3', '.item_3');
-          check('#services_4', '.block_4', '.item_4');
-          check('#services_5', '.block_5', '.item_5');
-          check('#services_6', '.block_6', '.item_6');
-      });
-    };
-  };
-
-  var showMenu = function () {
-    $('.open_menu').click( function (evt) {
-      evt.preventDefault();
-      $('.menu, .overlay').addClass('display_on');
+  var getReload = function () {
+    $(window).on("orientationchange",function(event){
+      location.reload();
     });
 
-    $('.close, .overlay, .menu .item').click( function (evt) {
-      evt.preventDefault();
-      $('.menu, .overlay').removeClass('display_on');
+    $(window).resize(function(){
+      location.reload();
     });
   };
-
-  var getMarquee = function () {
-    $('.marquee_1').marquee({
-      direction: 'right',
-      duplicated: true,
-      speed: 40,
-      startVisible: true
-    });
-
-    $('.marquee_2').marquee({
-      direction: 'left',
-      duplicated: true,
-      speed: 30,
-      startVisible: true
-    });
-
-    $('.marquee_3').marquee({
-      direction: 'right',
-      duplicated: true,
-      speed: 30,
-      startVisible: true
-    });
-  };
-
-  $(window).on("orientationchange",function(event){
-    location.reload();
-  });
-
-  $(window).resize(function(){
-    location.reload();
-  });
 
   hangFlexslider();
-  getShadowMenu();
-  slowScroll();
-  getShowServices();
   showMenu();
-  getMarquee();
+  getValidForm();
+  getReload();
 
 }());

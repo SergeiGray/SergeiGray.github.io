@@ -441,14 +441,13 @@
 
   var slowScroll = function () {
     $(document).ready(function() {
-      if($(window).width() > 1150) {
+      // if($(window).width() > 1150) {
         $('#landing_scroll_down, #go_to_services').click(function (evt) {
           evt.preventDefault();
           $('body').scrollTo(
             $('#services'), {
             axis: 'y',
             duration: 900,
-            offset: -75,
           });
         });
 
@@ -458,7 +457,6 @@
             $('#technologies'), {
             axis: 'y',
             duration: 900,
-            offset: -75,
           });
         });
 
@@ -468,7 +466,6 @@
             $('#values'), {
             axis: 'y',
             duration: 900,
-            offset: -75,
           });
         });
 
@@ -478,7 +475,6 @@
             $('#decisions'), {
             axis: 'y',
             duration: 900,
-            offset: -75,
           });
         });
 
@@ -488,7 +484,6 @@
             $('#timeline'), {
             axis: 'y',
             duration: 900,
-            offset: -75,
           });
         });
 
@@ -498,7 +493,6 @@
             $('#experience'), {
             axis: 'y',
             duration: 900,
-            offset: -75,
           });
         });
 
@@ -508,82 +502,90 @@
             $('#contacts'), {
             axis: 'y',
             duration: 900,
-            offset: -75,
-          });
-        });
-      };
-
-      if($(window).width() < 1151) {
-        $('#landing_scroll_down, #go_to_services').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#services'), {
-            axis: 'y',
-            duration: 900,
-            offset: 0,
           });
         });
 
-        $('#go_to_technologies').click(function (evt) {
+        $('#go_to_form_header_desk, #go_to_form_header_tablet,  #go_to_form_footer').click(function (evt) {
           evt.preventDefault();
           $('body').scrollTo(
-            $('#technologies'), {
+            $('#form'), {
             axis: 'y',
             duration: 900,
-            offset: 0,
           });
         });
+      // };
 
-        $('#go_to_values').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#values'), {
-            axis: 'y',
-            duration: 900,
-            offset: 0,
-          });
-        });
+      // if($(window).width() < 1151) {
+      //   $('#landing_scroll_down, #go_to_services').click(function (evt) {
+      //     evt.preventDefault();
+      //     $('body').scrollTo(
+      //       $('#services'), {
+      //       axis: 'y',
+      //       duration: 900,
+      //       offset: 0,
+      //     });
+      //   });
 
-        $('#go_to_decisions').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#decisions'), {
-            axis: 'y',
-            duration: 900,
-            offset: 0,
-          });
-        });
+      //   $('#go_to_technologies').click(function (evt) {
+      //     evt.preventDefault();
+      //     $('body').scrollTo(
+      //       $('#technologies'), {
+      //       axis: 'y',
+      //       duration: 900,
+      //       offset: 0,
+      //     });
+      //   });
 
-        $('#go_to_timeline').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#timeline'), {
-            axis: 'y',
-            duration: 900,
-            offset: 0,
-          });
-        });
+      //   $('#go_to_values').click(function (evt) {
+      //     evt.preventDefault();
+      //     $('body').scrollTo(
+      //       $('#values'), {
+      //       axis: 'y',
+      //       duration: 900,
+      //       offset: 0,
+      //     });
+      //   });
 
-        $('#go_to_experience').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#experience'), {
-            axis: 'y',
-            duration: 900,
-            offset: 0,
-          });
-        });
+      //   $('#go_to_decisions').click(function (evt) {
+      //     evt.preventDefault();
+      //     $('body').scrollTo(
+      //       $('#decisions'), {
+      //       axis: 'y',
+      //       duration: 900,
+      //       offset: 0,
+      //     });
+      //   });
 
-        $('#go_to_contacts').click(function (evt) {
-          evt.preventDefault();
-          $('body').scrollTo(
-            $('#contacts'), {
-            axis: 'y',
-            duration: 900,
-            offset: 0,
-          });
-        });
-      }
+      //   $('#go_to_timeline').click(function (evt) {
+      //     evt.preventDefault();
+      //     $('body').scrollTo(
+      //       $('#timeline'), {
+      //       axis: 'y',
+      //       duration: 900,
+      //       offset: 0,
+      //     });
+      //   });
+
+      //   $('#go_to_experience').click(function (evt) {
+      //     evt.preventDefault();
+      //     $('body').scrollTo(
+      //       $('#experience'), {
+      //       axis: 'y',
+      //       duration: 900,
+      //       offset: 0,
+      //     });
+      //   });
+
+      //   $('#go_to_contacts').click(function (evt) {
+      //     evt.preventDefault();
+      //     $('body').scrollTo(
+      //       $('#contacts'), {
+      //       axis: 'y',
+      //       duration: 900,
+      //       offset: 0,
+      //     });
+      //   });
+      // }
     });
   };
 
