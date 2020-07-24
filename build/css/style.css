@@ -4263,12 +4263,12 @@ button,
 .pages-for-solutions .text-under-image {
   font-size: 18px;
   line-height: 181.69%;
-  color: #ffffff;
-  margin-bottom: 68px; }
+  color: #ffffff; }
 
 .pages-for-solutions .top-block {
   min-height: 315px;
   margin-bottom: 70px;
+  padding-bottom: 40px;
   background-color: #236ac8;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -4735,7 +4735,6 @@ button,
   margin-bottom: 70px; }
 
 .pages-for-solutions.integrated_planning .top-block {
-  padding-bottom: 70px;
   background-image: url("../img/decisions/inside_integrated_planning.png"); }
 
 .pages-for-solutions.integrated_planning .tasks .text:not(:last-of-type) {
@@ -4824,7 +4823,6 @@ button,
       margin-right: 35px; }
 
 .pages-for-solutions.solutions_industry .top-block {
-  padding-bottom: 70px;
   background-image: url("../img/decisions/inside_solutions_industry.png"); }
 
 .pages-for-solutions.solutions_industry .tasks {
@@ -4998,8 +4996,9 @@ button,
   .pages-for-solutions .main_image {
     margin-bottom: 22px; }
   .pages-for-solutions .text-under-image {
-    font-size: 16px;
-    margin-bottom: 40px; }
+    font-size: 16px; }
+  .pages-for-solutions .top-block {
+    min-height: 225px; }
   .pages-for-solutions .subtitle {
     font-size: 26px; }
   .pages-for-solutions .top-block {
@@ -5146,8 +5145,7 @@ button,
     margin-bottom: 22px; }
   .pages-for-solutions .text-under-image {
     font-size: 16px;
-    line-height: 169%;
-    margin-bottom: 36px; }
+    line-height: 169%; }
   .pages-for-solutions .subtitle {
     font-size: 20px; }
     .pages-for-solutions .subtitle br {
@@ -5496,8 +5494,7 @@ button,
     margin-bottom: 13px; }
   .pages-for-solutions .text-under-image {
     font-size: 14px;
-    line-height: 158.19%;
-    margin-bottom: 43px; }
+    line-height: 158.19%; }
   .pages-for-solutions .subtitle {
     font-size: 16px;
     line-height: 158.6%; }
