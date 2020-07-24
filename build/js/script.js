@@ -729,13 +729,17 @@
   };
 
   var getReload = function () {
-    $(window).on("orientationchange",function(event){
-      location.reload();
-    });
+    if($(window).width() < 1151) {
+      $(window).on("orientationchange",function(event){
+        location.reload();
+      });
+    }
 
-    $(window).resize(function(){
-      location.reload();
-    });
+    if($(window).width() > 1150) {
+      $(window).resize(function(){
+        location.reload();
+      });
+    }
   };
 
   hangFlexslider();

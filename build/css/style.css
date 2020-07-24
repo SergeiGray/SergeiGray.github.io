@@ -628,8 +628,6 @@ button,
     background-color: transparent; }
     .header .wrapper {
       min-height: 55px; }
-    .header .logo {
-      margin-left: 20px; }
     .header .open_menu {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -790,8 +788,6 @@ button,
 @media (max-width: 750px) {
   .header .wrapper {
     min-height: 50px; }
-  .header .logo {
-    margin-left: 15px; }
   .header .menu .list {
     padding: 70px 30px 0; }
   .header .menu .item:first-child {
@@ -817,9 +813,6 @@ button,
 
 .landing {
   position: relative;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -862,7 +855,7 @@ button,
   .landing .wrapper {
     z-index: 10;
     height: 100%;
-    padding-top: 155px;
+    padding-top: 15vh;
     color: #ffffff; }
   .landing .headline {
     position: relative;
@@ -875,7 +868,7 @@ button,
     background-size: contain;
     width: 1242px;
     height: 135px;
-    margin-bottom: 105px; }
+    margin-bottom: 9vh; }
     .landing .headline::before {
       content: '';
       position: absolute;
@@ -953,13 +946,11 @@ button,
     .landing::before {
       bottom: 25px;
       left: 20px; }
-    .landing .wrapper {
-      padding-top: 122px; }
     .landing .headline {
       font-size: 107px;
-      margin-bottom: 92px;
       width: 960px;
-      height: 105px; }
+      height: 105px;
+      margin-bottom: 10vh; }
       .landing .headline::before {
         top: 12px;
         right: -181px; }
@@ -976,13 +967,11 @@ button,
     margin-top: -56px; }
     .landing::before {
       display: none; }
-    .landing .wrapper {
-      padding-top: 65px; }
     .landing .headline {
       font-size: 70px;
-      margin-bottom: 27px;
       width: 626px;
-      height: 67px; }
+      height: 67px;
+      margin-bottom: 6vh; }
       .landing .headline::before {
         display: none; }
     .landing .container {
@@ -1012,6 +1001,8 @@ button,
     .landing .wrapper {
       overflow: hidden;
       padding-top: 70px; }
+    .landing .video {
+      display: none; }
     .landing .headline {
       font-size: 54px;
       margin-bottom: 30px;
@@ -4335,6 +4326,8 @@ button,
     margin: 0;
     font-weight: 600;
     font-size: 18px; }
+    .pages-for-solutions .explanation .text:last-of-type {
+      margin-bottom: 0; }
 
 .pages-for-solutions .customers {
   display: -webkit-box;
@@ -4948,6 +4941,55 @@ button,
 .pages-for-solutions.td_visualization .scenarios .text:first-child {
   font-weight: normal; }
 
+.pages-for-solutions.leak_detection .top-block {
+  background-image: url("../img/decisions/inside_leak_detection.png"); }
+
+.pages-for-solutions.leak_detection .tasks {
+  margin-bottom: 70px; }
+  .pages-for-solutions.leak_detection .tasks .customers {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .pages-for-solutions.leak_detection .tasks .container {
+    width: 33.3333%;
+    min-height: 190px;
+    padding: 50px 20px 20px 65px;
+    background-color: #2482FF;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff; }
+    .pages-for-solutions.leak_detection .tasks .container .text {
+      position: relative;
+      margin: 0;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 163%; }
+      .pages-for-solutions.leak_detection .tasks .container .text:before {
+        content: '';
+        position: absolute;
+        top: 9px;
+        left: -35px;
+        width: 8px;
+        height: 8px;
+        background-color: #ffffff;
+        border: 4px solid #509bff; }
+
+.pages-for-solutions.leak_detection .technology {
+  width: 100%;
+  margin-bottom: 110px; }
+  .pages-for-solutions.leak_detection .technology .list {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: none; }
+  .pages-for-solutions.leak_detection .technology .item {
+    width: 32%;
+    min-height: 216px;
+    background: #0C1C32 url("../img/mask_block.png") no-repeat center center;
+    background-size: cover; }
+
+.pages-for-solutions.leak_detection .effects .list {
+  margin-bottom: 70px; }
+
 @media (max-width: 1450px) {
   .pages-for-solutions .breadcrumbs {
     margin-bottom: 15px; }
@@ -5409,7 +5451,33 @@ button,
         font-size: 12px;
         line-height: 163%; }
   .pages-for-solutions.td_visualization .scenarios .text:first-child:before {
-    top: 4px; } }
+    top: 4px; }
+  .pages-for-solutions.leak_detection .tasks {
+    margin-bottom: 35px; }
+    .pages-for-solutions.leak_detection .tasks .container {
+      width: 50%;
+      min-height: 190px;
+      padding: 50px 20px 20px 65px;
+      background-color: #2482FF;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff; }
+      .pages-for-solutions.leak_detection .tasks .container .text {
+        position: relative;
+        margin: 0;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 163%; }
+        .pages-for-solutions.leak_detection .tasks .container .text:before {
+          content: '';
+          position: absolute;
+          top: 9px;
+          left: -35px;
+          width: 8px;
+          height: 8px;
+          background-color: #ffffff;
+          border: 4px solid #509bff; }
+  .pages-for-solutions.leak_detection .technology {
+    margin-bottom: 60px; } }
 
 @media (max-width: 750px) {
   .pages-for-solutions .top-block {
@@ -5798,6 +5866,18 @@ button,
     min-height: 160px;
     padding: 25px 20px 20px 50px; }
   .pages-for-solutions.td_visualization .scenarios {
-    min-height: 410px; } }
+    min-height: 410px; }
+  .pages-for-solutions.leak_detection .tasks .container {
+    width: 100%; }
+    .pages-for-solutions.leak_detection .tasks .container .text {
+      font-size: 12px; }
+      .pages-for-solutions.leak_detection .tasks .container .text:before {
+        top: 2px;
+        left: -27px; }
+  .pages-for-solutions.leak_detection .technology .item {
+    width: 100%;
+    min-height: 160px;
+    padding: 25px 20px 20px 50px;
+    margin-bottom: 15px; } }
 
 /*# sourceMappingURL=style.css.map */
