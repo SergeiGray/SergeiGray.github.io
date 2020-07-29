@@ -828,7 +828,7 @@ button,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 100vh;
+  min-height: calc(100vh + 2px);
   margin-top: -77px; }
   .landing::before {
     z-index: 15;
@@ -1294,6 +1294,8 @@ button,
         width: 276px;
         height: 143px;
         margin-bottom: 15px; }
+      .services .block .image {
+        width: auto; }
       .services .block .text {
         font-size: 12px;
         margin-bottom: 35px; }
@@ -2207,7 +2209,7 @@ button,
           text-transform: none;
           color: #0C1C32;
           border-radius: 1px;
-          border: 1px solid #2482FF;
+          border: 1px solid #e6e6e6;
           cursor: auto; }
       .experience__slider_item .list {
         -webkit-box-orient: vertical;

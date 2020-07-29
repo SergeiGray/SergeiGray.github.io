@@ -735,12 +735,21 @@
       });
     }
 
-    // if($(window).width() > 1150) {
+    if($(window).width() > 750) {
       $(window).resize(function(){
         location.reload();
       });
-    // }
+    }
   };
+
+
+  var getRevealatorEffects = function () {
+    $(document).ready(function() {
+      $('window').trigger('scroll');
+      $('body').trigger('scroll');
+    });
+  };
+
 
   getReload();
   hangFlexslider();
@@ -750,5 +759,6 @@
   showMenu();
   getMarquee();
   getValidForm();
+  getRevealatorEffects();
 
 }());

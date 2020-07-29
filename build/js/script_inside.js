@@ -500,7 +500,7 @@
       });
     }
 
-    if($(window).width() > 1150) {
+    if($(window).width() > 750) {
       $(window).resize(function(){
         location.reload();
       });
