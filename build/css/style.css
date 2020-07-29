@@ -2245,8 +2245,7 @@ button,
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: rgba(0, 0, 0, 0.1); }
+    border: 1px solid #e6e6e6; }
     .experience .customers .container {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -2261,7 +2260,7 @@ button,
       width: 20%;
       background-color: #ffffff; }
       .experience .customers .container:not(:last-child) {
-        border-right: 1px solid rgba(0, 0, 0, 0.1); }
+        border-right: 1px solid #e6e6e6; }
     .experience .customers__slider_container {
       display: -webkit-box;
       display: -ms-flexbox;
