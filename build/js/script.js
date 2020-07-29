@@ -735,13 +735,14 @@
       });
     }
 
-    if($(window).width() > 1150) {
+    // if($(window).width() > 1150) {
       $(window).resize(function(){
         location.reload();
       });
-    }
+    // }
   };
 
+  getReload();
   hangFlexslider();
   getShadowMenu();
   slowScroll();
@@ -749,6 +750,5 @@
   showMenu();
   getMarquee();
   getValidForm();
-  getReload();
 
 }());

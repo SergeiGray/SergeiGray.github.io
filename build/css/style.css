@@ -1131,9 +1131,9 @@ button,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     color: #0C1C32; }
     .services .block .subtitle {
       font-weight: bold;
@@ -1151,7 +1151,8 @@ button,
       margin-bottom: 20px; }
     .services .block .button {
       -ms-flex-item-align: start;
-          align-self: flex-start; }
+          align-self: flex-start;
+      margin-top: auto; }
   .services .banner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1176,6 +1177,8 @@ button,
       margin-bottom: 27px; }
     .services .banner .text {
       line-height: 160%; }
+  .services .flex-control-nav {
+    display: none; }
 
 @media (max-width: 1450px) {
   .services {
@@ -1256,6 +1259,9 @@ button,
         margin: 15px;
         padding: 0; }
       .services__slider .flex-control-nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         bottom: -40px; }
     .services .banner {
       padding-top: 30px;
