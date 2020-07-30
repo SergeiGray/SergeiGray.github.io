@@ -736,8 +736,12 @@
     }
 
     if($(window).width() > 750) {
+      var widthBefore = $( window ).width();
       $(window).resize(function(){
-        location.reload();
+        var widthAfter = $( window ).width();
+        if (widthBefore !== widthAfter) {
+          location.reload();
+        }
       });
     }
   };
