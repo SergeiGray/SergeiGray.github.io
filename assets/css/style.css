@@ -750,7 +750,6 @@ textarea.form-control {
 .grid figure figcaption {
 	padding: 2em;
 	color: #fff;
-	text-transform: uppercase;
 	font-size: 1.25em;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
@@ -795,6 +794,7 @@ textarea.form-control {
 }
 
 .grid figure p {
+	text-align: left;
 	letter-spacing: 1px;
 	font-size: 68.5%;
 }
