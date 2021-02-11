@@ -7,13 +7,6 @@ init();
 animate();
 
 function init() {
-    // stats = new Stats();
-    // stats.setMode(0);
-    // stats.domElement.style.position = 'absolute';
-    // stats.domElement.style.left = '0px';
-    // stats.domElement.style.top = '0px';
-    // document.body.appendChild(stats.domElement);
-
     clock = new THREE.Clock();
 
     renderer = new THREE.WebGLRenderer();
@@ -31,10 +24,10 @@ function init() {
     //scene.add( mesh );
     cubeSineDriver = 0;
 
-    textGeo = new THREE.PlaneGeometry(300,300);
+    textGeo = new THREE.PlaneGeometry(500, 400);
     THREE.ImageUtils.crossOrigin = ''; //Need this to pull in crossdomain images from AWS
     textTexture = THREE.ImageUtils.loadTexture('https://sergeigray.github.io/criminal_version/criminal_photo.jpg');
-    textMaterial = new THREE.MeshLambertMaterial({color: 0x00ffff, opacity: 1, map: textTexture, transparent: true, blending: THREE.AdditiveBlending})
+    textMaterial = new THREE.MeshLambertMaterial({ color: 0xffffff, opacity: 1, map: textTexture, transparent: true, blending: THREE.AdditiveBlending})
     text = new THREE.Mesh(textGeo,textMaterial);
     text.position.z = 800;
     scene.add(text);
@@ -88,3 +81,11 @@ function render() {
     renderer.render( scene, camera );
 
 }
+
+  var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  if (!isChrome){
+      $('#iframeAudio').remove()
+  }
+  else {
+      $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background
+  }
