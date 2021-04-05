@@ -1,1 +1,0 @@
-# SergeiGray.github.io
